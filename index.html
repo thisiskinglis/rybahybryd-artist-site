@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RYBAHYBRYD — Music · Philosophy · Legacy — MentalMentorStudio®</title>
+<meta name="description" content="Dragon. Fish. Shapeshifter. Born Poland. Built UK. Living South Africa. HYBRYD 1.0 · 2026 · MentalMentorStudio®">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Archivo+Black&family=Archivo:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#04040e;--bg2:#080818;
+  --p1:#9b35ff;--p2:#5500cc;
+  --b1:#00b4ff;--b2:#0066cc;pac-cover
+  
+  --copper:#b87333;--copper-glow:rgba(184,115,51,0.3);
+  --white:#f0eeff;--mid:#6060aa;--dim:#1a1a30;--red:#c0392b;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--white);font-family:'Archivo',sans-serif;overflow-x:hidden;cursor:crosshair;}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.6;}
+.cursor-glow{position:fixed;width:320px;height:320px;border-radius:50%;pointer-events:none;z-index:0;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(123,47,255,0.06) 0%,transparent 70%);transition:left 0.05s,top 0.05s;}
+
+/* ── LANG SWITCHER ── */
+.lang-switcher{display:flex;align-items:center;gap:6px;}
+.lang-btn{
+  display:flex;align-items:center;gap:6px;
+  padding:5px 12px;border:1px solid rgba(123,47,255,0.2);
+  background:none;cursor:crosshair;
+  font-family:'Archivo',sans-serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--mid);transition:all 0.2s;
+}
+.lang-btn:hover{border-color:rgba(123,47,255,0.5);color:var(--white);}
+.lang-btn.active{border-color:var(--copper);color:var(--white);background:rgba(184,115,51,0.08);}
+.flag{font-size:14px;line-height:1;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:18px 7vw;background:rgba(4,4,14,0.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(123,47,255,0.12);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:5px;background:linear-gradient(135deg,var(--copper),var(--p1),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+.nav-center{display:flex;gap:28px;list-style:none;}
+.nav-center a{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s;}
+.nav-center a:hover{color:var(--white);}
+.nav-right{display:flex;align-items:center;gap:16px;}
+
+/* ── SECTION SHARED ── */
+.section-number{font-size:10px;letter-spacing:4px;text-transform:uppercase;margin-bottom:18px;color:var(--p1);}
+h2.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,6vw,72px);letter-spacing:3px;line-height:1;margin-bottom:14px;background:linear-gradient(135deg,var(--p1),var(--white),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.accent-line{display:block;width:80px;height:2px;margin-bottom:40px;background:linear-gradient(90deg,var(--copper),var(--b1));}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 7vw 80px;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 70% at 5% 60%,rgba(123,47,255,0.13) 0%,transparent 65%),radial-gradient(ellipse 55% 70% at 95% 40%,rgba(0,180,255,0.11) 0%,transparent 65%),radial-gradient(ellipse 30% 40% at 50% 80%,rgba(184,115,51,0.06) 0%,transparent 60%);pointer-events:none;}
+.hero-logo-slot{position:absolute;top:40%;right:7vw;transform:translateY(-50%);width:160px;height:160px;z-index:2;pointer-events:none;opacity:0.92;filter:drop-shadow(0 0 24px rgba(123,47,255,0.25));}
+.hero-logo-slot{
+  position:absolute;
+  top:50%;
+  right:0;
+  transform:translateY(-50%);
+  width:48vw; /* <- makes it HUGE, fills the right side */
+  height:90vh;
+  max-width:800px;
+  z-index:2;
+  pointer-events:none;
+  opacity:0.92;
+  filter:drop-shadow(0 0 40px rgba(123,47,255,0.35));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-logo-slot img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+@media(max-width:1100px){.hero-logo-slot{width:42vw;height:70vh;}}
+@media(max-width:900px){.hero-logo-slot{display:none;}}
+@media(max-width:1100px){.hero-logo-slot{width:110px;height:110px;}}
+@media(max-width:900px){.hero-logo-slot{display:none;}}
+.hero::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(180deg,transparent,rgba(123,47,255,0.25) 30%,rgba(184,115,51,0.2) 60%,rgba(0,180,255,0.25) 90%,transparent);pointer-events:none;}
+.kicker{font-size:10px;font-weight:600;letter-spacing:6px;text-transform:uppercase;color:var(--b1);margin-bottom:28px;opacity:0;animation:fadeup 0.8s 0.1s forwards;}
+.hero-name{font-family:'Bebas Neue',sans-serif;display:flex;flex-direction:column;position:relative;z-index:2;line-height:0.88;gap:4px;opacity:0;animation:fadeup 0.8s 0.2s forwards;}
+.stair-smok{display:block;font-size:clamp(52px,10vw,130px);margin-left:0;letter-spacing:6px;line-height:0.9;background:linear-gradient(135deg,#dd9933,#ffcc66,#b87333);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:fadeup 0.6s 0.25s forwards,copper-pulse 4s ease-in-out 1.5s infinite;}
+.stair-ryba{display:block;font-size:clamp(80px,16vw,200px);margin-left:clamp(40px,6vw,100px);letter-spacing:6px;line-height:0.9;background:linear-gradient(135deg,#cc88ff 0%,#ffffff 50%,#44ccff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;animation:fadeup 0.6s 0.4s forwards,pulse-glow 4s ease-in-out 2s infinite;}
+.stair-hybryd{display:block;font-size:clamp(48px,9vw,115px);margin-left:clamp(90px,14vw,220px);letter-spacing:6px;line-height:0.9;background:linear-gradient(135deg,#4400cc 0%,#00aaff 60%,#0066cc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 30px rgba(0,180,255,0.4));opacity:0;animation:fadeup 0.6s 0.55s forwards;}
+@keyframes copper-pulse{0%,100%{filter:drop-shadow(0 0 16px rgba(184,115,51,0.4));}50%{filter:drop-shadow(0 0 44px rgba(184,115,51,0.8));}}
+@keyframes pulse-glow{0%,100%{filter:drop-shadow(0 0 20px rgba(123,47,255,0.4));}50%{filter:drop-shadow(0 0 50px rgba(0,180,255,0.6));}}
+.hero-creature{display:flex;align-items:center;gap:14px;margin:22px 0;opacity:0;animation:fadeup 0.8s 0.4s forwards;}
+.creature-tag{font-size:9px;letter-spacing:5px;text-transform:uppercase;padding:5px 12px;border:1px solid;}
+.ct-dragon{color:var(--copper);border-color:rgba(184,115,51,0.4);}
+.ct-fish{color:var(--b1);border-color:rgba(0,180,255,0.4);}
+.ct-shifter{color:var(--p1);border-color:rgba(123,47,255,0.4);}
+.ct-sep{color:#2a2a44;font-size:14px;}
+.hero-tagline{font-family:'Archivo Black',sans-serif;font-size:clamp(18px,3vw,36px);line-height:1.25;max-width:700px;opacity:0;animation:fadeup 0.8s 0.5s forwards;color:#aaaadd;margin-bottom:0;}
+.hero-tagline strong{color:var(--white);}
+.hl-c{color:var(--copper);}
+.hl-p{color:var(--p1);}
+.hl-b{color:var(--b1);}
+.graffiti-strip{display:flex;justify-content:space-between;align-items:center;margin-top:30px;padding:14px 0;border-top:1px solid rgba(123,47,255,0.2);border-bottom:1px solid rgba(123,47,255,0.2);opacity:0;animation:fadeup 0.8s 0.6s forwards;}
+.g-tag{font-family:'Bebas Neue',sans-serif;font-size:clamp(14px,2vw,22px);letter-spacing:5px;}
+.g-tag-left{background:linear-gradient(135deg,var(--copper),#ffcc66);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 10px rgba(184,115,51,0.5));}
+.g-tag-right{background:linear-gradient(135deg,var(--p1),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 10px rgba(123,47,255,0.5));}
+.g-sep{font-size:9px;letter-spacing:4px;color:#2a2a44;text-transform:uppercase;}
+.time-paradox{margin-top:22px;opacity:0;animation:fadeup 0.8s 0.65s forwards;}
+.time-paradox-text{font-family:'Bebas Neue',sans-serif;font-size:clamp(14px,2vw,20px);letter-spacing:4px;background:linear-gradient(90deg,var(--copper),var(--p1),var(--b1),var(--copper));background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient-shift 5s ease infinite;}
+@keyframes gradient-shift{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+.ekg-wrap{width:100%;height:44px;overflow:hidden;margin:28px 0 0;opacity:0;animation:fadeup 0.8s 0.7s forwards;}
+.ekg-svg{width:200%;height:100%;animation:slide 5s linear infinite;}
+@keyframes slide{to{transform:translateX(-50%);}}
+.hero-socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;opacity:0;animation:fadeup 0.8s 0.8s forwards;}
+.hero-social{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border:1px solid var(--dim);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:all 0.25s;background:rgba(10,10,28,0.8);position:relative;overflow:hidden;}
+.hero-social::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(123,47,255,0.08),rgba(0,180,255,0.08));opacity:0;transition:opacity 0.25s;}
+.hero-social:hover{color:var(--white);border-color:var(--p1);box-shadow:0 0 16px rgba(123,47,255,0.2);}
+.hero-social:hover::before{opacity:1;}
+.hero-social .plat{color:var(--p1);font-weight:700;}
+@keyframes fadeup{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* WHO */
+.who-section{padding:100px 7vw;position:relative;z-index:1;}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;}
+.who-facts{display:flex;flex-direction:column;gap:0;}
+.who-fact{display:flex;align-items:baseline;gap:16px;padding:18px 0;border-bottom:1px solid rgba(123,47,255,0.1);opacity:0;transform:translateX(-20px);transition:opacity 0.6s,transform 0.6s;}
+.who-fact.show{opacity:1;transform:none;}
+.who-fact-num{font-size:9px;letter-spacing:4px;color:var(--p1);min-width:28px;}
+.who-fact-text{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3.5vw,38px);letter-spacing:3px;color:var(--white);line-height:1;}
+.who-right{opacity:0;transform:translateX(20px);transition:opacity 0.7s 0.2s,transform 0.7s 0.2s;}
+.who-right.show{opacity:1;transform:none;}
+.who-right p{font-size:clamp(15px,1.8vw,18px);line-height:1.85;color:#8888bb;margin-bottom:20px;}
+.who-right p strong{color:var(--white);}
+.who-right p em{color:var(--copper);font-style:italic;}
+.btn-primary{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:4px;color:var(--white);text-decoration:none;padding:16px 40px;border:1px solid rgba(184,115,51,0.4);background:linear-gradient(135deg,rgba(85,0,204,0.4),rgba(0,102,204,0.3));transition:all 0.3s;position:relative;overflow:hidden;}
+.btn-primary::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.07),transparent);transition:left 0.5s;}
+.btn-primary:hover::after{left:100%;}
+.btn-primary:hover{border-color:var(--copper);box-shadow:0 0 30px rgba(184,115,51,0.25),0 0 60px rgba(123,47,255,0.2);}
+
+/* STORY */
+.story-section{padding:80px 7vw;position:relative;z-index:1;}
+.story-section::before{content:'';position:absolute;top:0;bottom:0;left:calc(7vw + 20px);width:1px;background:linear-gradient(180deg,transparent,rgba(123,47,255,0.3),rgba(184,115,51,0.25),rgba(0,180,255,0.3),transparent);}
+.timeline-item{display:grid;grid-template-columns:220px 1fr;gap:0 60px;margin-bottom:60px;position:relative;opacity:0;transform:translateY(24px);transition:all 0.65s ease;}
+.timeline-item.show{opacity:1;transform:none;}
+.ti-left{text-align:right;padding-right:30px;position:relative;}
+.ti-left::after{content:'';position:absolute;right:-21px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--p1);border:2px solid var(--bg);box-shadow:0 0 10px var(--p1);}
+.timeline-item:nth-child(3) .ti-left::after{background:var(--copper);box-shadow:0 0 10px var(--copper);}
+.timeline-item:nth-child(4) .ti-left::after{background:var(--red);box-shadow:0 0 10px var(--red);}
+.timeline-item:nth-child(5) .ti-left::after{background:var(--b1);box-shadow:0 0 10px var(--b1);width:14px;height:14px;right:-23px;}
+.ti-era{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--p1);display:block;margin-bottom:6px;}
+.timeline-item:nth-child(3) .ti-era{color:var(--copper);}
+.timeline-item:nth-child(4) .ti-era{color:var(--red);}
+.timeline-item:nth-child(5) .ti-era{color:var(--b1);}
+.ti-heading{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,48px);letter-spacing:3px;line-height:0.95;color:var(--white);display:block;}
+.ti-right p{font-size:clamp(14px,1.6vw,17px);line-height:1.85;color:#8080bb;}
+.ti-right p strong{color:var(--white);}
+.ti-right p em{color:var(--copper);font-style:italic;}
+
+/* MUSIC */
+.music-section{padding:80px 7vw;background:var(--bg2);}
+.album-meta-bar{display:flex;flex-wrap:wrap;gap:0;border:1px solid rgba(123,47,255,0.15);margin-top:40px;margin-bottom:2px;}
+.alb-cell{flex:1;min-width:110px;padding:14px 20px;border-right:1px solid rgba(123,47,255,0.1);}
+.alb-cell:last-child{border-right:none;}
+.alb-label{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--p1);display:block;margin-bottom:5px;}
+.alb-val{font-size:13px;color:var(--white);font-weight:600;letter-spacing:1px;}
+.tracklist{margin-top:2px;}
+.track-row{display:grid;grid-template-columns:52px 1fr auto;gap:0 20px;padding:26px 22px;border-bottom:1px solid rgba(123,47,255,0.08);background:var(--bg2);position:relative;overflow:hidden;opacity:0;transform:translateY(16px);transition:all 0.55s ease;}
+.track-row.show{opacity:1;transform:none;}
+.track-row:hover{background:rgba(123,47,255,0.04);}
+.track-row::before{content:attr(data-roman);position:absolute;right:80px;top:50%;transform:translateY(-50%);font-family:'Bebas Neue',sans-serif;font-size:80px;letter-spacing:2px;background:linear-gradient(135deg,rgba(123,47,255,0.03),rgba(0,180,255,0.03));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;pointer-events:none;user-select:none;line-height:1;}
+.track-row.bonus-track{background:rgba(123,47,255,0.04);}
+.track-row.bonus-track::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--copper),var(--p1),var(--b1));box-shadow:0 0 8px var(--copper);}
+.tr-num{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;color:var(--p1);padding-top:4px;align-self:start;}
+.bonus-track .tr-num{color:var(--copper);}
+.tr-body{position:relative;z-index:1;}
+.tr-bonus-flag{font-size:8px;letter-spacing:5px;text-transform:uppercase;color:var(--copper);display:block;margin-bottom:4px;}
+.tr-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,34px);letter-spacing:2px;color:var(--white);display:block;line-height:1.1;margin-bottom:6px;}
+.tr-feat{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#3a3a5a;display:block;margin-bottom:8px;}
+.tr-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+.tr-tag{font-size:8px;letter-spacing:3px;text-transform:uppercase;padding:4px 9px;border:1px solid;}
+.tg-p{color:var(--p1);border-color:rgba(123,47,255,0.3);}
+.tg-b{color:var(--b1);border-color:rgba(0,180,255,0.3);}
+.tg-c{color:var(--copper);border-color:rgba(184,115,51,0.3);}
+.tg-w{color:var(--mid);border-color:rgba(96,96,170,0.3);}
+.tr-desc{font-size:13px;line-height:1.7;color:#6060aa;font-style:italic;max-width:600px;}
+.tr-mood{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#2a2a44;display:block;margin-top:8px;}
+.tr-dur{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:#2a2a44;text-align:right;padding-top:4px;align-self:start;}
+.tr-dur.open{color:rgba(123,47,255,0.4);animation:blink 3s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:0.4;}50%{opacity:1;}}
+.video-section{margin-top:40px;}
+.video-section h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,36px);letter-spacing:3px;color:var(--mid);margin-bottom:20px;}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px;}
+.video-placeholder{background:var(--bg);border:1px dashed rgba(123,47,255,0.2);aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;position:relative;overflow:hidden;transition:border-color 0.2s;}
+.video-placeholder:hover{border-color:rgba(123,47,255,0.5);}
+.video-placeholder::before{content:attr(data-title);position:absolute;bottom:0;left:0;right:0;padding:12px 16px;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--mid);background:linear-gradient(180deg,transparent,rgba(4,4,14,0.9));}
+.vp-play{width:52px;height:52px;border-radius:50%;border:1px solid rgba(123,47,255,0.4);display:flex;align-items:center;justify-content:center;}
+
+/* MANIFESTO */
+.manifesto-section{padding:80px 7vw;position:relative;z-index:1;}
+.m-line{display:block;width:2px;height:60px;background:linear-gradient(180deg,var(--p1),var(--copper),var(--b1));margin:0 auto 60px;box-shadow:0 0 12px var(--p1);}
+.m-block{max-width:820px;margin:0 auto 60px;opacity:0;transform:translateY(24px);transition:all 0.65s ease;}
+.m-block.show{opacity:1;transform:none;}
+.m-label{font-size:9px;letter-spacing:6px;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:12px;}
+.m-label::after{content:'';flex:1;height:1px;}
+.m-block:nth-child(1) .m-label{color:var(--p1);}
+.m-block:nth-child(1) .m-label::after{background:linear-gradient(90deg,rgba(123,47,255,0.4),transparent);}
+.m-block:nth-child(2) .m-label{color:var(--copper);}
+.m-block:nth-child(2) .m-label::after{background:linear-gradient(90deg,rgba(184,115,51,0.4),transparent);}
+.m-block:nth-child(3) .m-label{color:var(--b1);}
+.m-block:nth-child(3) .m-label::after{background:linear-gradient(90deg,rgba(0,180,255,0.4),transparent);}
+.m-block:nth-child(4) .m-label{color:var(--copper);}
+.m-block:nth-child(4) .m-label::after{background:linear-gradient(90deg,rgba(184,115,51,0.4),transparent);}
+.m-text{font-size:clamp(15px,1.9vw,20px);line-height:1.8;color:#8888bb;}
+.m-text strong{color:var(--white);font-weight:600;}
+.m-text em{font-style:italic;color:var(--p1);}
+.m-text .ec{color:var(--copper);font-style:italic;}
+.m-text .eb{color:var(--b1);}
+.manifesto-words{max-width:820px;margin:60px auto 0;display:flex;flex-direction:column;gap:6px;}
+.mw-line{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,8vw,90px);letter-spacing:4px;line-height:1;opacity:0;transform:translateX(-30px);transition:opacity 0.5s,transform 0.5s;-webkit-text-stroke:1px rgba(123,47,255,0.2);color:transparent;}
+.mw-line.show{opacity:1;transform:none;color:var(--white);-webkit-text-stroke:0;}
+.mw-line:nth-child(even){text-align:right;transform:translateX(30px);}
+.mw-line:nth-child(even).show{transform:none;}
+.quote-block{margin:60px auto;max-width:860px;padding:55px 30px;text-align:center;opacity:0;transform:translateY(24px);transition:all 0.65s ease;position:relative;}
+.quote-block.show{opacity:1;transform:none;}
+.quote-block::before{content:'';position:absolute;top:-1px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--copper),var(--p1),transparent);box-shadow:0 0 12px var(--copper);}
+.quote-block::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--b1),var(--p1),transparent);box-shadow:0 0 12px var(--b1);}
+.quote-text{font-family:'Archivo Black',sans-serif;font-size:clamp(22px,3.8vw,48px);line-height:1.25;background:linear-gradient(135deg,var(--copper) 0%,var(--p1) 40%,var(--white) 60%,var(--b1) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.raw-doc{max-width:820px;margin:60px auto;padding:40px 44px;border:1px solid rgba(123,47,255,0.2);background:var(--bg2);position:relative;opacity:0;transform:translateY(24px);transition:all 0.65s ease;}
+.raw-doc.show{opacity:1;transform:none;}
+.raw-doc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p1),var(--copper),var(--b1));}
+.raw-line{display:block;font-size:clamp(13px,1.5vw,16px);line-height:2.1;color:#7070aa;}
+.rl-bold{color:var(--white);font-weight:700;}
+.rl-geo{color:#9955ff;}
+.rl-dark{color:#5050aa;}
+.rl-kj{color:var(--p1);}
+.rl-turn{background:linear-gradient(90deg,var(--copper),var(--p1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700;}
+.rl-coven{color:var(--b1);}
+.rl-son{background:linear-gradient(90deg,var(--copper),var(--white));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700;}
+.rl-br{display:block;height:0.8rem;}
+
+/* NERYS */
+.nerys-section{padding:80px 7vw;background:var(--bg2);}
+.nerys-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;}
+.nerys-visual{position:relative;aspect-ratio:1;max-width:380px;}
+.n-ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(123,47,255,0.18);animation:ringRotate 22s linear infinite;}
+.n-ring:nth-child(2){inset:20px;border-color:rgba(0,180,255,0.12);animation-duration:31s;animation-direction:reverse;}
+.n-ring:nth-child(3){inset:40px;border-color:rgba(184,115,51,0.1);animation-duration:17s;}
+.n-center{position:absolute;inset:70px;border-radius:50%;background:radial-gradient(circle,rgba(123,47,255,0.12),transparent);display:flex;align-items:center;justify-content:center;border:1px solid rgba(123,47,255,0.1);}
+.n-center-text{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:4px;background:linear-gradient(135deg,var(--p1),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center;line-height:1.4;}
+@keyframes ringRotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.nerys-eyebrow{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--p1);display:block;margin-bottom:14px;}
+.nerys-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,60px);letter-spacing:3px;line-height:0.95;margin-bottom:24px;background:linear-gradient(135deg,var(--p1),var(--white),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.nerys-body{font-size:clamp(14px,1.6vw,17px);line-height:1.85;color:#8080bb;margin-bottom:20px;}
+.nerys-body strong{color:var(--white);}
+.nerys-body em{color:var(--copper);font-style:italic;}
+.coming-soon{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:5px;text-transform:uppercase;color:var(--copper);border:1px solid rgba(184,115,51,0.3);padding:10px 24px;animation:pulseBorder 3s ease-in-out infinite;}
+@keyframes pulseBorder{0%,100%{border-color:rgba(184,115,51,0.3);}50%{border-color:rgba(184,115,51,0.7);box-shadow:0 0 16px rgba(184,115,51,0.2);}}
+
+/* GEO */
+.geo-timeline{padding:80px 7vw;}
+.geo-table{width:100%;border-collapse:collapse;margin-top:40px;max-width:1000px;}
+.geo-table tr{border-bottom:1px solid rgba(123,47,255,0.08);opacity:0;transform:translateY(12px);transition:opacity 0.5s,transform 0.5s,background 0.2s;}
+.geo-table tr.show{opacity:1;transform:none;}
+.geo-table tr:hover{background:rgba(123,47,255,0.03);}
+.geo-table td{padding:18px 20px;font-size:13px;vertical-align:middle;}
+.geo-place{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px;display:block;}
+.geo-years{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#2a2a44;margin-top:3px;display:block;}
+.geo-desc{color:#6060aa;line-height:1.75;font-size:13px;}
+.geo-pl .geo-place{background:linear-gradient(90deg,var(--p1),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.geo-eng .geo-place{color:var(--b1);}
+.geo-fall .geo-place{color:var(--red);}
+.geo-za .geo-place{background:linear-gradient(90deg,var(--copper),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.geo-future .geo-place{color:#2a2a44;-webkit-text-stroke:1px rgba(123,47,255,0.3);}
+
+/* COMMUNITY */
+.community-section{padding:80px 7vw;background:var(--bg2);}
+.handles-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px;max-width:800px;}
+.handle{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1px solid var(--dim);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:all 0.25s;background:rgba(10,10,28,0.8);position:relative;overflow:hidden;}
+.handle::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(123,47,255,0.08),rgba(0,180,255,0.08));opacity:0;transition:opacity 0.25s;}
+.handle:hover{color:var(--white);border-color:var(--p1);box-shadow:0 0 16px rgba(123,47,255,0.2);}
+.handle:hover::before{opacity:1;}
+.handle .platform{color:var(--p1);font-weight:700;}
+.handle:nth-child(even) .platform{color:var(--b1);}
+.handle:nth-child(3) .platform{color:var(--copper);}
+.sabotage-block{margin:50px 0 0;padding:40px 36px;border:1px solid rgba(123,47,255,0.2);background:var(--bg);position:relative;overflow:hidden;max-width:680px;}
+.sabotage-block::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p1),var(--copper),var(--b1));box-shadow:0 0 12px var(--copper);}
+.sab-label{font-size:9px;letter-spacing:6px;text-transform:uppercase;color:var(--copper);margin-bottom:14px;display:block;}
+.sab-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,52px);letter-spacing:5px;line-height:1;margin-bottom:14px;background:linear-gradient(135deg,var(--copper),var(--p1),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 16px rgba(184,115,51,0.2));}
+.sab-desc{font-size:13px;line-height:1.75;color:#6060aa;margin-bottom:24px;}
+
+/* CONTACT */
+.contact-section{padding:80px 7vw;}
+.contact-inner{max-width:580px;}
+.contact-sub{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#3a3a5a;margin-bottom:40px;display:block;}
+.form-group{margin-bottom:20px;}
+.form-group label{display:block;font-size:8px;letter-spacing:5px;text-transform:uppercase;color:var(--mid);margin-bottom:8px;}
+.form-group input,.form-group textarea{width:100%;background:rgba(8,8,24,0.9);border:1px solid rgba(123,47,255,0.15);padding:14px 18px;color:var(--white);font-family:'Archivo',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s;}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--p1);}
+.form-group textarea{min-height:140px;resize:vertical;}
+.submit-btn{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:5px;color:var(--white);background:linear-gradient(135deg,var(--p2),#220066,var(--b2));border:1px solid rgba(184,115,51,0.3);padding:18px 48px;cursor:crosshair;transition:all 0.3s;position:relative;overflow:hidden;}
+.submit-btn::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.07),transparent);transition:left 0.5s;}
+.submit-btn:hover::after{left:100%;}
+.submit-btn:hover{box-shadow:0 0 40px rgba(184,115,51,0.3),0 0 80px rgba(123,47,255,0.25);}
+.form-confirm{display:none;margin-top:16px;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--p1);}
+
+/* FOOTER */
+footer{padding:40px 7vw;border-top:1px solid var(--dim);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;position:relative;z-index:1;}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--p1),var(--copper),var(--b1));box-shadow:0 0 10px var(--copper);}
+.footer-sig{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:4px;background:linear-gradient(135deg,var(--p1),var(--copper),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.footer-coda{font-family:'Archivo Black',sans-serif;font-size:13px;color:#8888bb;font-style:italic;}
+.footer-copy{font-size:9px;letter-spacing:3px;color:#2a2a44;text-transform:uppercase;line-height:2;text-align:right;}
+
+/* ── VAULT ── */
+.vault-section{padding:80px 7vw;background:var(--bg);}
+.vault-intro{font-size:clamp(14px,1.6vw,17px);line-height:1.85;color:#7070aa;max-width:820px;margin-bottom:60px;}
+.vault-intro strong{color:var(--white);}
+.vault-intro em{color:var(--copper);}
+
+/* Triple Bible */
+.triple-bible{margin-bottom:70px;}
+.tb-header{display:flex;align-items:center;gap:20px;margin-bottom:30px;padding-bottom:18px;border-bottom:1px solid rgba(184,115,51,0.2);}
+.tb-crown{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,48px);letter-spacing:4px;background:linear-gradient(135deg,var(--copper),#ffcc66,var(--copper));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 12px rgba(184,115,51,0.4));}
+.tb-sub{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:#3a3a5a;}
+.tb-stat{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--copper);border:1px solid rgba(184,115,51,0.3);padding:5px 12px;margin-left:auto;}
+
+.bible-volumes{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:30px;}
+@media(max-width:700px){.bible-volumes{grid-template-columns:1fr;}}
+.bible-vol{padding:28px 22px;border:1px solid rgba(123,47,255,0.12);background:var(--bg2);position:relative;overflow:hidden;transition:border-color 0.2s;}
+.bible-vol:hover{border-color:rgba(123,47,255,0.35);}
+.bible-vol::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.bible-vol.vol-1::before{background:linear-gradient(90deg,var(--p1),var(--b1));}
+.bible-vol.vol-2::before{background:linear-gradient(90deg,var(--copper),var(--p1));}
+.bible-vol.vol-3::before{background:linear-gradient(90deg,var(--b1),var(--copper));}
+.vol-status{font-size:8px;letter-spacing:4px;text-transform:uppercase;display:block;margin-bottom:10px;}
+.vol-1 .vol-status{color:var(--p1);}
+.vol-2 .vol-status,.vol-3 .vol-status{color:#3a3a5a;}
+.vol-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,34px);letter-spacing:3px;display:block;color:var(--white);margin-bottom:6px;}
+.vol-2 .vol-title,.vol-3 .vol-title{color:#3a3a5a;}
+.vol-tag{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#2a2a44;display:block;margin-bottom:14px;}
+.vol-1 .vol-tag{color:var(--mid);}
+.vol-action{font-size:8px;letter-spacing:4px;text-transform:uppercase;display:inline-block;padding:7px 16px;border:1px solid;}
+.vol-1 .vol-action{color:var(--p1);border-color:rgba(123,47,255,0.3);}
+.vol-2 .vol-action,.vol-3 .vol-action{color:#2a2a44;border-color:rgba(123,47,255,0.08);}
+.freezer-label{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#2a2a44;margin-top:10px;display:block;}
+
+/* PacOzziPolacco album */
+/* PacOzziPolacco album */
+.pac-section{padding:80px 7vw;background:var(--bg2);}
+.pac-header{display:grid;grid-template-columns:auto 1fr;gap:30px 50px;align-items:start;margin-bottom:50px;}
+@media(max-width:700px){.pac-header{grid-template-columns:1fr;gap:24px;}}
+
+.pac-cover-slot{
+  width: clamp(320px, 28vw, 420px); /* bigger */
+  height: auto;
+  aspect-ratio: 2 / 3; /* tall poster shape, not square */
+  border:1px dashed rgba(184,115,51,0.3);
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  flex-shrink:0;
+}
+.pac-cover-slot img{
+  width:102%;
+  height:102%;
+  object-fit:cover;
+  object-position: center top;
+  display:block;
+}
+.pac-cover-slot.has-image .cover-placeholder-text{display:none;}
+.cover-placeholder-text{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#2a2a44;text-align:center;padding:10px;}
+.pac-cover-slot::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--copper),var(--p1),var(--b1)); z-index:2;}
+
+.pac-info{}
+.pac-eyebrow{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--copper);display:block;margin-bottom:10px;}
+.pac-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,80px);letter-spacing:4px;line-height:0.9;background:linear-gradient(135deg,var(--copper),var(--p1),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 20px rgba(184,115,51,0.3));display:block;margin-bottom:16px;}
+.pac-meta-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.pac-tag{font-size:8px;letter-spacing:3px;text-transform:uppercase;padding:5px 12px;border:1px solid;}
+.pac-tag.t-c{color:var(--copper);border-color:rgba(184,115,51,0.3);}
+.pac-tag.t-p{color:var(--p1);border-color:rgba(123,47,255,0.3);}
+.pac-tag.t-b{color:var(--b1);border-color:rgba(0,180,255,0.3);}
+.pac-desc{font-size:clamp(13px,1.5vw,16px);line-height:1.8;color:#7070aa;max-width:560px;}
+.pac-desc strong{color:var(--white);}
+@media(max-width:700px){.pac-header{grid-template-columns:1fr;gap:24px;}}
+.pac-cover-slot{width:200px;height:200px;border:1px dashed rgba(184,115,51,0.3);background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden;flex-shrink:0;}
+.pac-cover-slot img{width:100%;height:100%;object-fit:cover;display:block;}
+.pac-cover-slot.has-image .cover-placeholder-text{display:none;}
+.cover-placeholder-text{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#2a2a44;text-align:center;padding:10px;}
+.pac-cover-slot::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--copper),var(--p1),var(--b1));}
+.pac-info{}
+.pac-eyebrow{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--copper);display:block;margin-bottom:10px;}
+.pac-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,80px);letter-spacing:4px;line-height:0.9;background:linear-gradient(135deg,var(--copper),var(--p1),var(--b1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 20px rgba(184,115,51,0.3));display:block;margin-bottom:16px;}
+.pac-meta-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.pac-tag{font-size:8px;letter-spacing:3px;text-transform:uppercase;padding:5px 12px;border:1px solid;}
+.pac-tag.t-c{color:var(--copper);border-color:rgba(184,115,51,0.3);}
+.pac-tag.t-p{color:var(--p1);border-color:rgba(123,47,255,0.3);}
+.pac-tag.t-b{color:var(--b1);border-color:rgba(0,180,255,0.3);}
+.pac-desc{font-size:clamp(13px,1.5vw,16px);line-height:1.8;color:#7070aa;max-width:560px;}
+.pac-desc strong{color:var(--white);}
+
+/* Sub-album tabs */
+.sub-tabs{display:flex;gap:2px;margin-bottom:2px;}
+.sub-tab{flex:1;padding:16px 20px;border:1px solid rgba(123,47,255,0.12);background:var(--bg);font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:3px;color:#3a3a5a;cursor:pointer;transition:all 0.2s;text-align:center;position:relative;}
+.sub-tab::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:transparent;transition:background 0.2s;}
+.sub-tab.active{color:var(--white);background:rgba(123,47,255,0.06);border-color:rgba(123,47,255,0.3);}
+.sub-tab.active::before{background:linear-gradient(90deg,var(--p1),var(--b1));}
+.sub-tab:hover{color:var(--mid);}
+.sub-panel{display:none;}
+.sub-panel.active{display:block;}
+
+/* Track cards */
+.track-card{display:grid;grid-template-columns:44px 1fr;gap:0 18px;padding:22px 20px;border-bottom:1px solid rgba(123,47,255,0.07);background:var(--bg2);position:relative;overflow:hidden;cursor:pointer;transition:background 0.2s;}
+.track-card:hover{background:rgba(123,47,255,0.04);}
+.track-card.expanded{background:rgba(8,8,28,0.9);}
+.tc-num{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;color:var(--p1);padding-top:5px;align-self:start;}
+.tc-body{}
+.tc-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.8vw,30px);letter-spacing:2px;color:var(--white);display:block;line-height:1.1;margin-bottom:5px;}
+.tc-tags{display:flex;gap:5px;flex-wrap:wrap;}
+.tc-tag{font-size:7px;letter-spacing:3px;text-transform:uppercase;padding:3px 8px;border:1px solid;}
+.tc-tag.tp{color:var(--p1);border-color:rgba(123,47,255,0.25);}
+.tc-tag.tb{color:var(--b1);border-color:rgba(0,180,255,0.25);}
+.tc-tag.tc{color:var(--copper);border-color:rgba(184,115,51,0.25);}
+
+/* Expandable content panel */
+.track-expand{display:none;padding:20px 20px 24px calc(44px + 18px);border-bottom:1px solid rgba(123,47,255,0.07);background:rgba(4,4,20,0.95);}
+.track-expand.open{display:block;}
+.expand-tabs{display:flex;gap:2px;margin-bottom:16px;}
+.exp-tab{font-size:8px;letter-spacing:3px;text-transform:uppercase;padding:7px 14px;border:1px solid rgba(123,47,255,0.12);color:#3a3a5a;cursor:pointer;background:none;transition:all 0.2s;}
+.exp-tab.active{color:var(--white);border-color:rgba(123,47,255,0.4);background:rgba(123,47,255,0.06);}
+.exp-panel{display:none;}
+.exp-panel.active{display:block;}
+
+/* Video embed */
+.video-embed-wrap{position:relative;width:100%;aspect-ratio:16/9;background:var(--bg);border:1px dashed rgba(123,47,255,0.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;overflow:hidden;}
+.video-embed-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none;}
+.video-placeholder-inner{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.vp-icon{width:48px;height:48px;border-radius:50%;border:1px solid rgba(123,47,255,0.3);display:flex;align-items:center;justify-content:center;}
+.vp-label{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:#2a2a44;}
+.yt-link{display:inline-block;margin-top:10px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--p1);border:1px solid rgba(123,47,255,0.3);padding:8px 16px;text-decoration:none;transition:all 0.2s;}
+.yt-link:hover{border-color:var(--p1);color:var(--white);}
+
+/* Lyrics panel */
+.lyrics-panel{background:rgba(4,4,14,0.9);border:1px solid rgba(123,47,255,0.1);padding:24px;}
+.lyrics-text{font-size:clamp(13px,1.5vw,15px);line-height:2.2;color:#7070aa;white-space:pre-wrap;font-family:'Archivo',sans-serif;}
+.lyrics-text .verse-label{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--p1);display:block;margin-bottom:6px;margin-top:18px;}
+.lyrics-text .chorus-label{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--copper);display:block;margin-bottom:6px;margin-top:18px;}
+.lyrics-text .section-label{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--p1);display:block;margin-bottom:6px;margin-top:18px;}
+.lyrics-text .section-label:first-child{margin-top:0;}
+.lyrics-text .direction{color:#5050aa;font-style:italic;}
+.lyrics-text .sound{color:#4a4a70;font-style:italic;}
+.import-bar{margin-top:20px;padding:16px 22px;border:1px dashed rgba(123,47,255,0.25);display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:rgba(8,8,24,0.5);}
+.import-bar input[type="file"]{font-size:11px;color:#8888bb;max-width:220px;}
+.import-btn{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;color:#fff;background:rgba(123,47,255,0.2);border:1px solid rgba(123,47,255,0.3);padding:8px 18px;cursor:pointer;}
+.import-btn:hover{border-color:var(--p1);}
+.lyrics-empty{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#2a2a44;text-align:center;padding:30px;}
+
+/* Visual panel */
+.visual-panel{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:2px;}
+.visual-slot{aspect-ratio:1;background:var(--bg);border:1px dashed rgba(123,47,255,0.15);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.visual-slot img{width:100%;height:100%;object-fit:cover;}
+.visual-slot-empty{font-size:7px;letter-spacing:3px;text-transform:uppercase;color:#1a1a30;text-align:center;padding:8px;}
+
+/* Standalone singles */
+.singles-section{padding:60px 7vw;background:var(--bg);}
+.singles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px;margin-top:30px;}
+.single-card{padding:24px 20px;border:1px solid rgba(123,47,255,0.1);background:var(--bg2);position:relative;overflow:hidden;transition:border-color 0.2s;}
+.single-card:hover{border-color:rgba(123,47,255,0.3);}
+.single-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.single-card.s-copper::before{background:linear-gradient(90deg,var(--copper),var(--p1));}
+.single-card.s-purple::before{background:linear-gradient(90deg,var(--p1),var(--b1));}
+.sc-label{font-size:8px;letter-spacing:4px;text-transform:uppercase;display:block;margin-bottom:8px;}
+.s-copper .sc-label{color:var(--copper);}
+.s-purple .sc-label{color:var(--p1);}
+.sc-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,34px);letter-spacing:2px;display:block;color:var(--white);margin-bottom:8px;line-height:1;}
+.sc-desc{font-size:12px;line-height:1.7;color:#5050aa;}
+
+/* LANG TRANSITION */
+[data-en],[data-pl]{transition:opacity 0.2s;}
+
+@media(max-width:900px){
+  .who-grid,.nerys-grid{grid-template-columns:1fr;}
+  nav .nav-center{display:none;}
+  .timeline-item{grid-template-columns:1fr;gap:12px;}
+  .ti-left{text-align:left;padding-left:24px;padding-right:0;}
+  .ti-left::after{right:auto;left:-20px;}
+  .story-section::before{left:6vw;}
+}
+@media(max-width:600px){
+  .hero,.who-section,.story-section,.music-section,.manifesto-section,.nerys-section,.geo-timeline,.community-section,.contact-section{padding:60px 6vw;}
+  .track-row{grid-template-columns:36px 1fr auto;}
+  .album-meta-bar{flex-direction:column;}
+  .alb-cell{border-right:none;border-bottom:1px solid rgba(123,47,255,0.08);}
+}
+</style>
+</head>
+<body>
+<div class="cursor-glow" id="glow"></div>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#hero" class="nav-logo">RYBA × MMs®</a>
+  <ul class="nav-center">
+    <li><a href="#stations" data-en="Stations" data-pl="Stacje">Stations</a></li>
+    <li><a href="#who" data-en="About" data-pl="O mnie">About</a></li>
+    <li><a href="#story" data-en="Story" data-pl="Historia">Story</a></li>
+    <li><a href="#music" data-en="Music" data-pl="Muzyka">Music</a></li>
+    <li><a href="#vault" data-en="Vault" data-pl="Skarbiec">Vault</a></li>
+    <li><a href="#manifesto" data-en="Manifesto" data-pl="Manifest">Manifesto</a></li>
+    <li><a href="#nerys" data-en="Nerys" data-pl="Nerys">Nerys</a></li>
+    <li><a href="#connect" data-en="Connect" data-pl="Połącz">Connect</a></li>
+    <li><a href="#contact" data-en="Contact" data-pl="Kontakt">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('pl')">PL</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-logo-slot">
+    <img src="rh-logo.png" alt="RH — RYBA HYBRYD" onerror="this.parentElement.style.display='none'">
+  </div>
+  <span class="kicker" data-en="MentalMentorStudio® — Artist Portfolio — 2026" data-pl="MentalMentorStudio® — Portfolio Artysty — 2026">MentalMentorStudio® — Artist Portfolio — 2026</span>
+  <div class="hero-name">
+    <span class="stair-smok">SMOK</span>
+    <span class="stair-ryba">RYBA</span>
+    <span class="stair-hybryd">HYBRYD</span>
+  </div>
+  <div class="hero-creature">
+    <span class="creature-tag ct-dragon" data-en="Dragon" data-pl="Smok">Dragon</span>
+    <span class="ct-sep">×</span>
+    <span class="creature-tag ct-fish" data-en="Fish" data-pl="Ryba">Fish</span>
+    <span class="ct-sep">×</span>
+    <span class="creature-tag ct-shifter" data-en="Shapeshifter" data-pl="Przemiennik">Shapeshifter</span>
+  </div>
+  <p class="hero-tagline">
+    <strong data-en="From chaos to creation." data-pl="Z chaosu do tworzenia.">From chaos to creation.</strong>
+    <span class="hl-c" data-en=" Music." data-pl=" Muzyka."> Music.</span>
+    <span class="hl-p" data-en=" Philosophy." data-pl=" Filozofia."> Philosophy.</span>
+    <span class="hl-b" data-en=" Transformation." data-pl=" Transformacja."> Transformation.</span>
+    <span class="hl-c" data-en=" Legacy." data-pl=" Dziedzictwo."> Legacy.</span>
+  </p>
+  <div class="graffiti-strip">
+    <span class="g-tag g-tag-left">« NO DEAL JUST REAL »</span>
+    <span class="g-sep">·· MMs® ··</span>
+    <span class="g-tag g-tag-right">« DISCIPLINE BUILDS DEMONS »</span>
+  </div>
+  <div class="time-paradox">
+    <span class="time-paradox-text" data-en="Born Poland · Built England · Released South Africa · Three Countries · One Creature · Zero Lanes" data-pl="Urodzony Polska · Zbudowany Anglia · Wydany Afryka Południowa · Trzy Kraje · Jedno Stworzenie · Zero Torów">Born Poland · Built England · Released South Africa · Three Countries · One Creature · Zero Lanes</span>
+  </div>
+  <div class="hero-socials">
+    <a class="hero-social" href="https://youtube.com/@rybahybryd" target="_blank"><span class="plat">YT</span> YouTube</a>
+    <a class="hero-social" href="https://instagram.com/rybahybryd" target="_blank"><span class="plat">IG</span> Instagram</a>
+    <a class="hero-social" href="https://tiktok.com/@rybahybryd" target="_blank"><span class="plat">TT</span> TikTok</a>
+    <a class="hero-social" href="https://facebook.com/rybahybryd" target="_blank"><span class="plat">FB</span> Facebook</a>
+  </div>
+  <div class="ekg-wrap">
+    <svg class="ekg-svg" viewBox="0 0 1200 44" preserveAspectRatio="none">
+      <defs><filter id="eg"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+      <polyline points="0,22 80,22 95,22 105,3 115,41 125,3 135,41 145,22 240,22 255,22 265,10 275,34 285,10 295,34 305,22 400,22 415,3 425,41 435,3 445,41 455,22 540,22 550,22 560,8 570,36 580,8 590,36 600,22" fill="none" stroke="rgba(155,53,255,0.9)" stroke-width="1.5" filter="url(#eg)"/>
+      <polyline points="550,22 570,22 580,2 590,42 600,22 620,22" fill="none" stroke="rgba(184,115,51,0.9)" stroke-width="2" filter="url(#eg)"/>
+      <polyline points="600,22 680,22 695,22 705,3 715,41 725,3 735,41 745,22 840,22 855,22 865,10 875,34 885,10 895,34 905,22 1000,22 1015,3 1025,41 1035,3 1045,41 1055,22 1140,22 1150,22 1160,8 1170,36 1180,8 1190,36 1200,22" fill="none" stroke="rgba(0,180,255,0.9)" stroke-width="1.5" filter="url(#eg)"/>
+    </svg>
+  </div>
+</section>
+
+<section class="story-section" id="stations">
+  <div class="section-number" data-en="The Campaign" data-pl="Kampania">The Campaign</div>
+  <h2 class="section-title">PACOZZIPOLACCO EXPRESS</h2>
+  <span class="accent-line"></span>
+
+  <div class="pac-header" style="margin-bottom:40px;">
+      <img src="pacozzipolacco-express-poster.jpg" alt="PACOZZIPOLACCO EXPRESS — Official Route Poster" onerror="this.style.display='none'">
+      <div class="cover-placeholder-text" data-en="Campaign Poster — PACOZZIPOLACCO EXPRESS" data-pl="Plakat Kampanii — PACOZZIPOLACCO EXPRESS">Campaign Poster<br>PACOZZIPOLACCO EXPRESS</div>
+    </div>
+    <div class="pac-info">
+      <span class="pac-eyebrow">RYBA HYBRYD × MENTALMENTORSTUDIO® · EST. 2026</span>
+      <span class="pac-title" style="font-size:clamp(28px,5vw,58px);">THE TRAIN NEVER STOPS.</span>
+      <div class="pac-meta-row">
+        <span class="pac-tag t-c" data-en="7 Tracks" data-pl="7 Utworów">7 Tracks</span>
+        <span class="pac-tag t-p" data-en="2 Languages" data-pl="2 Języki">2 Languages</span>
+        <span class="pac-tag t-b" data-en="14 Departures" data-pl="14 Odjazdów">14 Departures</span>
+        <span class="pac-tag t-c">397,110 KM</span>
+      </div>
+      <p class="pac-desc" data-en="<strong>A journey told in stations.</strong> Kraków → Grajewo → Bradford → London → Northwich → Durban → Moon → Galaxy. Distance to galaxy: unmeasurable. Each stop is a chapter, documented and released as the train moves." data-pl="<strong>Podróż opowiedziana w stacjach.</strong> Kraków → Grajewo → Bradford → Londyn → Northwich → Durban → Księżyc → Galaktyka. Odległość do galaktyki: niemierzalna. Każdy przystanek to rozdział, dokumentowany i wydawany w miarę jazdy pociągu."><strong>A journey told in stations.</strong> Kraków → Grajewo → Bradford → London → Northwich → Durban → Moon → Galaxy. Distance to galaxy: unmeasurable. Each stop is a chapter, documented and released as the train moves.</p>
+      <span style="display:inline-block;margin-top:14px;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--copper);border:1px solid rgba(184,115,51,0.3);padding:7px 16px;">Polskie Piątki · Outlaw Mondays</span>
+    </div>
+  </div>
+
+  <div class="album-meta-bar">
+    <div class="alb-cell"><span class="alb-label" data-en="Origin" data-pl="Początek">Origin</span><div class="alb-val">Kraków Główny</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Destination" data-pl="Cel">Destination</span><div class="alb-val" data-en="Durban → Moon → Galaxy" data-pl="Durban → Księżyc → Galaktyka">Durban → Moon → Galaxy</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Departure" data-pl="Odjazd">Departure</span><div class="alb-val">24.07.2026 · 13:33</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Route Length" data-pl="Długość Trasy">Route Length</span><div class="alb-val">397,110 KM</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Distance to Galaxy" data-pl="Odległość do Galaktyki">Distance to Galaxy</span><div class="alb-val" data-en="Unmeasurable" data-pl="Niemierzalna">Unmeasurable</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Status" data-pl="Status">Status</span><div class="alb-val" data-en="In Transit" data-pl="W Drodze">In Transit</div></div>
+  </div>
+
+  <div class="tracklist" style="margin-top:2px;">
+    <!-- Station 01 -->
+
+    <div class="track-card" onclick="toggleTrack('s01')">
+      <div class="tc-num">01</div>
+      <div class="tc-body">
+        <span class="tc-title">CZEKAJ, JA IDĘ!</span>
+        <span class="tr-feat" data-en="Station 01 · Kraków Główny · English: WAIT, I GO!" data-pl="Stacja 01 · Kraków Główny · Ang.: WAIT, I GO!">Station 01 · Kraków Główny · English: WAIT, I GO!</span>
+        <div class="tc-tags">
+          <span class="tc-tag tp" data-en="Origin Station" data-pl="Stacja Początkowa">Origin Station</span>
+          <span class="tc-tag tb" data-en="Character Intro" data-pl="Wprowadzenie Postaci">Character Intro</span>
+          <span class="tc-tag tc" data-en="Bilingual" data-pl="Dwujęzyczny">Bilingual</span>
+        </div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-s01">
+      <div class="expand-tabs">
+        <button class="exp-tab active" onclick="switchExpTab('s01','concept',this)" data-en="Concept" data-pl="Koncepcja">Concept</button>
+        <button class="exp-tab" onclick="switchExpTab('s01','video',this)" data-en="Video" data-pl="Wideo">Video</button>
+        <button class="exp-tab" onclick="switchExpTab('s01','lyrics',this)" data-en="Lyrics" data-pl="Tekst">Lyrics</button>
+        <button class="exp-tab" onclick="switchExpTab('s01','visuals',this)" data-en="Visuals" data-pl="Wizualizacje">Visuals</button>
+      </div>
+
+      <div class="exp-panel active" id="s01-concept">
+        <div class="lyrics-panel">
+          <p style="font-size:13px;line-height:1.9;color:#8888bb;margin-bottom:16px;" data-en="<strong>Who is Ryba Hybryd?</strong> Artur Przemysław Czekaj. <strong>Where from?</strong> Poland. <strong>Philosophy?</strong> Everyone says wait. He moves. <strong>Heading?</strong> Beyond the horizon." data-pl="<strong>Kim jest Ryba Hybryd?</strong> Artur Przemysław Czekaj. <strong>Skąd?</strong> Polska. <strong>Filozofia?</strong> Wszyscy mówią czekaj. On idzie. <strong>Dokąd?</strong> Poza horyzont."><strong>Who is Ryba Hybryd?</strong> Artur Przemysław Czekaj. <strong>Where from?</strong> Poland. <strong>Philosophy?</strong> Everyone says wait. He moves. <strong>Heading?</strong> Beyond the horizon.</p>
+          <p style="font-size:13px;line-height:1.9;color:#6060aa;margin-bottom:8px;" data-en="Core devices in play:" data-pl="Główne motywy:">Core devices in play:</p>
+          <ul style="font-size:13px;line-height:1.9;color:#7070aa;padding-left:18px;margin-bottom:16px;">
+            <li data-en="The surname flip — Czekaj (Wait) → Ja idę (I go)" data-pl="Odwrócenie nazwiska — Czekaj (Czekaj) → Ja idę (Idę)">The surname flip — Czekaj (Wait) → Ja idę (I go)</li>
+            <li data-en="Route: Wawel → Wembley → Durban" data-pl="Trasa: Wawel → Wembley → Durban">Route: Wawel → Wembley → Durban</li>
+            <li data-en="Government name vs. legend name" data-pl="Imię z dowodu vs. imię legendy">Government name vs. legend name</li>
+            <li data-en="Outlaw humor mixed with real biography" data-pl="Outlawski humor zmieszany z prawdziwą biografią">Outlaw humor mixed with real biography</li>
+            <li data-en="Recurring moon imagery" data-pl="Powracający motyw księżyca">Recurring moon imagery</li>
+          </ul>
+          <p style="font-size:12px;line-height:1.8;color:#5050aa;font-style:italic;" data-en="Closing line: '...Zniknął.' Then a wolf howl. Then OUTLAW MONDAY. The train has departed." data-pl="Ostatnia linia: '...Zniknął.' Potem wycie wilka. Potem OUTLAW MONDAY. Pociąg odjechał.">Closing line: '...Zniknął.' Then a wolf howl. Then OUTLAW MONDAY. The train has departed.</p>
+        </div>
+      </div>
+
+      <div class="exp-panel" id="s01-video">
+        <div class="video-embed-wrap" id="vid-s01">
+          <div class="video-placeholder-inner">
+            <div class="vp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9b35ff"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="vp-label" data-en="Paste YouTube URL to activate" data-pl="Wklej URL YouTube aby aktywować">Paste YouTube URL to activate</span>
+          </div>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px;align-items:center;">
+          <input type="text" id="url-s01" placeholder="https://youtu.be/..." style="flex:1;background:rgba(8,8,24,0.9);border:1px solid rgba(123,47,255,0.15);padding:10px 14px;color:#fff;font-family:'Archivo',sans-serif;font-size:12px;outline:none;">
+          <button onclick="embedVideo('s01')" style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:#fff;background:rgba(123,47,255,0.2);border:1px solid rgba(123,47,255,0.3);padding:10px 18px;cursor:pointer;">LOAD</button>
+        </div>
+      </div>
+
+      <div class="exp-panel" id="s01-lyrics">
+        <div class="lyrics-panel">
+          <div class="lyrics-text lang-block" data-lang="pl">
+<span class="verse-label">Intro — Tylko gitara, 8 taktów</span>
+Tik... tik... tik...
+Czekaj... Czekaj...
+gitara narasta
+
+<span class="verse-label">Zwrotka 1 — Surowe, spoken/sung</span>
+Krzyczeli "CZEKAJ CZEKAJ" próbowali złapać mój cień
+Ja już byłem daleko, Wawel do Wembley maraton
+Rządowe imię na papierze, legenda w marginesie
+Artur Przemysław Czekaj — dzieciak którego mieli za okazję
+Shade testowany na setkach, teraz shade testowany na księżycu
+Brak przednich zębów gryzie złoto, to mój dentystyczny sponsor
+Dzieciak który zesrał gacie teraz ma pół krateru
+Zimne kamienie na śniadanie, księżycowe skały na deser później
+Nazwisko jest spoko bo jak ktoś mnie goni
+Krzyknij Czekaj Czekaj — ja nie czekałem, byłem wolny
+Już przy oceanie w Durbanie, "mówiłeś czekaj bro"
+To poczekałem na przypływ, potem ukradłem cały księżyc
+
+<span class="chorus-label">Refren — Gitara ciężko, tupanie nogą</span>
+Czekaj znaczy czekaj... ale ja nie czekam, JA IDĘ
+Pół księżyca w kieszeni, złoty zegar w zębach
+Mówili że znikąd, teraz wszędzie mnie widać
+Od Artura do PACOZZIPOLACCO, patrz jak rośnie królestwo
+Czekaj znaczy czekaj... ale ja nie czekam, JA IDĘ
+Pół księżyca w kieszeni, złoty zegar w zębach
+Mówili że znikąd, teraz wszędzie mnie widać
+Od Artura do PACOZZIPOLACCO, patrz jak rośnie królestwo
+
+<span class="verse-label">Zwrotka 2 — Ciszej, intymnie</span>
+Przemysław znaczy przewyższać chwałą, to prawo urodzenia
+Czekaj znaczy czekaj, ale tylko żebym ich wyprzedził szybciej
+Rząd dał mi ostrzeżenie jako nazwisko
+Kazałem swojemu nazwisku dla nich kłamać, to jest mistrzostwo
+Dwadzieścia lat krat w żyłach, teraz krwawią przez głośniki
+Honor 6 zdechł na 13% ale duch naładował się do 100
+Kat Anna pilnuje bram gdy ja kradnę kraj
+Dziury w uśmiechu = certyfikat autentyczności
+Prawdziwa waga złota, strach nie sprawdzi mojej gęstości
+Krew smoka z Wawelu, energia stadionu Wembley
+
+<span class="verse-label">Bridge — Tylko gitara, instrumental, 8 taktów</span>
+solo gitary
+tupanie narasta
+rytmu pukania ostrzem
+
+<span class="chorus-label">Refren x2 — Ogromny</span>
+Czekaj znaczy czekaj... ale ja nie czekam, JA IDĘ
+Pół księżyca w kieszeni, złoty zegar w zębach
+Mówili że znikąd, teraz wszędzie mnie widać
+Od Artura do PACOZZIPOLACCO, patrz jak rośnie królestwo
+Czekaj znaczy czekaj... ale ja nie czekam, JA IDĘ
+Pół księżyca w kieszeni, złoty zegar w zębach
+Mówili że znikąd, teraz wszędzie mnie widać
+Od Artura do PACOZZIPOLACCO, patrz jak rośnie królestwo
+
+<span class="verse-label">Outro — Surowy fade</span>
+Czekaj... Czekaj...
+gitara cichnie
+jeden oddech
+...połowa z tego
+cisza
+...Zniknął.
+wycie wilka: OUTLAW MONDAY
+          </div>
+          <div class="lyrics-text lang-block" data-lang="en" style="display:none;">
+<span class="verse-label">Intro — Guitar only, 8 bars</span>
+Tick... tick... tick...
+Czekaj... Czekaj...
+*guitar builds*
+
+<span class="verse-label">Verse 1 — Spoken/sung raw, 12 lines</span>
+They yelled "CZEKAJ CZEKAJ" tryna catch my shadow
+I was already gone, Wawel to Wembley marathon
+Government name on paper, legend name in margin
+Artur Przemysław Czekaj — the kid they said was bargain
+Shade tested on hundreds, now shade tested lunar
+Miss front teeth biting gold, that's my dental sponsor
+Kid who shat his pants now owns half the crater
+Cold stones for breakfast, moon rocks for dessert later
+Surname is cool because if someone chasing me
+Call Czekaj Czekaj — I was not, I was free
+Already at Durban ocean, "You said wait bro"
+So I waited for the tide, then I stole the moon whole
+
+<span class="chorus-label">Hook — Guitar strums heavy, foot stomp, 8 lines</span>
+Czekaj means wait... but I don't wait, I GO
+Half moon in my pocket, gold watch in sockets
+From nowhere they said, now everywhere I show
+Artur to PACOZZIPOLACCO, watch the kingdom grow
+Czekaj means wait... but I don't wait, I GO
+Half moon in my pocket, gold watch in sockets
+From nowhere they said, now everywhere I show
+Artur to PACOZZIPOLACCO, watch the kingdom grow
+
+<span class="verse-label">Verse 2 — Quieter, intimate, 10 lines</span>
+Przemysław means outshine with glory, that's the birthright
+Czekaj means wait, but only so I outrun them faster
+Government gave me a warning label as a last name
+I made my own surname lie for them, that's the master
+Twenty years bars in veins, now they bleeding through speakers
+Honor 6 died at 13% but the spirit charged to 100
+Kat Anna guarding gates while I steal the country
+Gaps in my smile = certificate of authenticity
+Real gold weight, fear can't test my density
+Wawel dragon blood, Wembley stadium energy
+
+<span class="verse-label">Bridge — Guitar only, instrumental, 8 bars</span>
+*guitar solo*
+*foot stomps build*
+*blade tap rhythm*
+
+<span class="chorus-label">Hook x2 — Massive, 8 lines</span>
+Czekaj means wait... but I don't wait, I GO
+Half moon in my pocket, gold watch in sockets
+From nowhere they said, now everywhere I show
+Artur to PACOZZIPOLACCO, watch the kingdom grow
+Czekaj means wait... but I don't wait, I GO
+Half moon in my pocket, gold watch in sockets
+From nowhere they said, now everywhere I show
+Artur to PACOZZIPOLACCO, watch the kingdom grow
+
+<span class="verse-label">Outro — Raw fade, 6 lines</span>
+Czekaj... Czekaj...
+*guitar fades*
+*one breath*
+...half of it
+*silence*
+...Gone.
+*wolf howl: AAAAAUUU*
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-panel" id="s01-visuals">
+        <div class="visual-panel">
+          <div class="visual-slot"><div class="visual-slot-empty" data-en="Platform 1 — thumbnail" data-pl="Peron 1 — miniatura">Platform 1 — thumbnail</div></div>
+          <div class="visual-slot"><div class="visual-slot-empty" data-en="Departure board 13:33" data-pl="Tablica odjazdów 13:33">Departure board 13:33</div></div>
+          <div class="visual-slot"><div class="visual-slot-empty" data-en="Half moon over station" data-pl="Półksiężyc nad stacją">Half moon over station</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Station 02 -->
+    <div class="track-card" onclick="toggleTrack('s02')">
+      <div class="tc-num">02</div>
+      <div class="tc-body">
+        <span class="tc-title">KAT ANNA</span>
+        <span class="tr-feat" data-en="Station 02 · Grajewo · (Kat Anna)" data-pl="Stacja 02 · Grajewo · (Kat Anna)">Station 02 · Grajewo · (Kat Anna)</span>
+        <div class="tc-tags">
+          <span class="tc-tag tp" data-en="Protection" data-pl="Ochrona">Protection</span>
+          <span class="tc-tag tb" data-en="Guardian" data-pl="Strażnik">Guardian</span>
+          <span class="tc-tag tc">03:21</span>
+        </div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-s02">
+      <div class="expand-tabs">
+        <button class="exp-tab active" onclick="switchExpTab('s02','video',this)" data-en="Video" data-pl="Wideo">Video</button>
+        <button class="exp-tab" onclick="switchExpTab('s02','lyrics',this)" data-en="Lyrics" data-pl="Tekst">Lyrics</button>
+        <button class="exp-tab" onclick="switchExpTab('s02','visuals',this)" data-en="Visuals" data-pl="Wizualizacje">Visuals</button>
+      </div>
+
+      <div class="exp-panel active" id="s02-video">
+        <div class="video-embed-wrap" id="vid-s02">
+          <div class="video-placeholder-inner">
+            <div class="vp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9b35ff"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="vp-label" data-en="Paste YouTube URL to activate" data-pl="Wklej URL YouTube aby aktywować">Paste YouTube URL to activate</span>
+          </div>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px;align-items:center;">
+          <input type="text" id="url-s02" placeholder="https://youtu.be/..." style="flex:1;background:rgba(8,8,24,0.9);border:1px solid rgba(123,47,255,0.15);padding:10px 14px;color:#fff;font-family:'Archivo',sans-serif;font-size:12px;outline:none;">
+          <button onclick="embedVideo('s02')" style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:#fff;background:rgba(123,47,255,0.2);border:1px solid rgba(123,47,255,0.3);padding:10px 18px;cursor:pointer;">LOAD</button>
+        </div>
+      </div>
+
+      <div class="exp-panel" id="s02-lyrics">
+        <div class="lyrics-panel">
+          <div class="lyrics-text lang-block" data-lang="pl">
+<span class="verse-label">Intro — Pukanie ostrzem w drewno, miękki rytm</span>
+tap... tap-tap... tap...
+tap... tap-tap... tap...
+(gitara wchodzi, melodia kołysanki, tonacja molowa)
+
+<span class="verse-label">Zwrotka 1 — Śpiewane cicho, kołysanka, ochronnie</span>
+Śpię lepiej, gdy katana leży przy łóżku
+Biało-czerwona wstążka łapie księżyc, ostrze skierowane do drzwi
+Żadne koszmary nie przejdą jej linii
+Żadne duchy z Bradford, Londynu czy Northwich nie przejdą
+
+Kasynowe demony widzą to ostrze i pamiętają
+Zła strefa, zły król, zła noc, żeby testować
+To jest mój miecz, panowie; z mieczem kontroluję strefę — moją strefę
+Musisz chronić swoją strefę, swoje kobiety, swój własny tyłek
+
+<span class="chorus-label">Refren — Rytm ostrza dalej</span>
+Kat Anna czuwa, gdy smok śpi
+Polska stal, polska gracja, polski los
+Kat Anna czuwa, gdy smok śpi
+Polska stal, polska gracja, polski los
+
+<span class="verse-label">Zwrotka 2 — Szeptem, blisko mikrofonu, intymnie</span>
+Grajewo '89 do Durbanu, przeżyła to wszystko
+Bradford stępił jej ostrze, Londyn zgasił jej blask
+Northwich wystawił jej charakter na próbę, kasyno sprawdziło cierpliwość
+Uzależnienie szeptało: „odłóż mnie" — powiedziała: „nie dziś"
+
+Kraty w pierdlu grzechotały, ona grzechotała głośniej
+Teraz nosi wstążkę i stoi na warcie nad upadkiem Honor 6
+Kat Anna nie śpi, Kat Anna nie marzy
+Kat Anna tylko czuwa, Kat Anna tylko błyszczy
+
+<span class="verse-label">Bridge — Solo na ostrzu, bez głosu</span>
+tap... tap-tap... tap...
+(pukanie cichnie)
+(pojedyncza nuta gitary)
+tap... tap...
+
+<span class="verse-label">Zwrotka 3 — Szept, prawie zasypiając</span>
+Mój syn jest w Polsce, geniusz, najlepszy w klasie
+Wygrywa konkursy z matmy, ogląda „Milionerów" w wieku 11 lat
+„Łatwy milion w wieku 18 lat" — powiedział; odpowiedziałem: „Mam nadzieję, że nie będziesz musiał"
+Kat Anna pilnuje go też, z dziesięciu tysięcy kilometrów
+
+Przez ostrze, przez krew, przez częstotliwość
+Śpij teraz, żołnierzu... warta stoi.
+
+<span class="chorus-label">Refren — Ostatni, zanikający</span>
+Kat Anna czuwa, gdy smok śpi
+Polska stal, polska gracja, polski los
+Kat Anna czuwa, gdy smok śpi
+Polska stal, polska gracja, polski los
+
+(stukanie ostrzem zwalnia)
+tap...
+(cisza)
+          </div>
+          <div class="lyrics-text lang-block" data-lang="en" style="display:none;">
+<span class="verse-label">Intro — Blade tapping wood, soft rhythm</span>
+tap... tap-tap... tap...
+tap... tap-tap... tap...
+(guitar enters, lullaby melody, minor key)
+
+<span class="verse-label">Verse 1 — Sung softly, lullaby, protective</span>
+I sleep better with a katana close to the bed
+Red-and-white ribbon catching moonlight, edge facing the door
+No nightmares cross her line
+No ghosts from Bradford, London, or Northwich get past her
+
+Casino demons see that blade and remember
+Wrong zone, wrong king, wrong night to test
+This is my sword, men; with a sword, I control the zone — my zone
+You need to protect your zone, your women, your own damn ass
+
+<span class="chorus-label">Hook — Blade rhythm continues</span>
+Kat Anna watches while the dragon dreams
+Polish steel, Polish grace, Polish fate
+Kat Anna watches while the dragon dreams
+Polish steel, Polish grace, Polish fate
+
+<span class="verse-label">Verse 2 — Spoken, closer to mic, intimate</span>
+Grajewo '89 to Durban, she survived it all
+Bradford broke her edge, London dulled her shine
+Northwich tested her temper, the casino tried her patience
+Addiction whispered, "put me down" — she said, "not tonight"
+
+Prison bars rattled, she rattled back louder
+Now she wears the ribbon and stands guard over Honor 6's fall
+Kat Anna don't sleep, Kat Anna don't dream
+Kat Anna just watches, Kat Anna just gleams
+
+<span class="verse-label">Bridge — Blade tap solo, no voice</span>
+tap... tap-tap... tap...
+(tap getting softer)
+(single guitar note)
+tap... tap...
+
+<span class="verse-label">Verse 3 — Whispered, almost asleep</span>
+My son is in Poland, a genius, best in class
+Winning math competitions, watching "Millionaires" at eleven
+"Easy million at eighteen," he said; I said, "I hope you won't need to"
+Kat Anna guards him too, from ten thousand kilometers away
+
+Through the blade, through the blood, through the frequency
+Sleep now, soldier... guard's up.
+
+<span class="chorus-label">Hook — Final, fading</span>
+Kat Anna watches while the dragon dreams
+Polish steel, Polish grace, Polish fate
+Kat Anna watches while the dragon dreams
+Polish steel, Polish grace, Polish fate
+
+(blade tap slows)
+tap...
+(silence)
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-panel" id="s02-visuals">
+        <div class="visual-panel">
+          <div class="visual-slot"><div class="visual-slot-empty" data-en="Visual coming" data-pl="Wizualizacja wkrótce">Visual coming</div></div>
+          <div class="visual-slot"><div class="visual-slot-empty" data-en="Visual coming" data-pl="Wizualizacja wkrótce">Visual coming</div></div>
+          <div class="visual-slot"><div class="visual-slot-empty" data-en="Visual coming" data-pl="Wizualizacja wkrótce">Visual coming</div></div>
+        </div>
+      </div>
+    </div>
+    <!-- Station 03 -->
+    <div class="track-card" onclick="toggleTrack('s03')">
+      <div class="tc-num">03</div>
+      <div class="tc-body">
+        <span class="tc-title">PÓŁ KSIĘŻYCA</span>
+        <span class="tr-feat" data-en="Station 03 · Bradford · (Half Moon Thrive)" data-pl="Stacja 03 · Bradford · (Half Moon Thrive)">Station 03 · Bradford · (Half Moon Thrive)</span>
+        <div class="tc-tags">
+          <span class="tc-tag tp" data-en="Polish Folk Strings" data-pl="Polskie Smyczki Ludowe">Polish Folk Strings</span>
+          <span class="tc-tag tb" data-en="Durban Frequency" data-pl="Częstotliwość Durbanu">Durban Frequency</span>
+          <span class="tc-tag tc">04:02</span>
+        </div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-s03">
+      <div class="expand-tabs">
+        <button class="exp-tab active" onclick="switchExpTab('s03','video',this)" data-en="Video" data-pl="Wideo">Video</button>
+        <button class="exp-tab" onclick="switchExpTab('s03','lyrics',this)" data-en="Lyrics" data-pl="Tekst">Lyrics</button>
+        <button class="exp-tab" onclick="switchExpTab('s03','visuals',this)" data-en="Visuals" data-pl="Wizualizacje">Visuals</button>
+      </div>
+
+      <div class="exp-panel active" id="s03-video">
+        <div class="video-embed-wrap" id="vid-s03">
+          <div class="video-placeholder-inner">
+            <div class="vp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9b35ff"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="vp-label" data-en="Paste YouTube URL to activate" data-pl="Wklej URL YouTube aby aktywować">Paste YouTube URL to activate</span>
+          </div>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px;align-items:center;">
+          <input type="text" id="url-s03" placeholder="https://youtu.be/..." style="flex:1;background:rgba(8,8,24,0.9);border:1px solid rgba(123,47,255,0.15);padding:10px 14px;color:#fff;font-family:'Archivo',sans-serif;font-size:12px;outline:none;">
+          <button onclick="embedVideo('s03')" style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:#fff;background:rgba(123,47,255,0.2);border:1px solid rgba(123,47,255,0.3);padding:10px 18px;cursor:pointer;">LOAD</button>
+        </div>
+      </div>
+
+      <div class="exp-panel" id="s03-lyrics">
+        <div class="lyrics-panel">
+          <div class="lyrics-text lang-block" data-lang="pl">
+<span class="verse-label">Intro — Polskie smyczki ludowe, wolno i nawiedzone</span>
+melodia smyczkowa, jak góry w nocy
+pojedyncza nuta gitary wybrzmiewa
+
+<span class="verse-label">Zwrotka 1 — Śpiewane cicho, narasta</span>
+Pół księżyca — nie cały, nie żebrzę, biorę co chcę
+Pół księżyca — wystarczy żeby PACOZZIPOLACCO zbudował tron
+Jasna strona na światła Wembley, ciemna strona na Ozzy + 2Pac
+Mówili "nigdzie" — ja wziąłem pół nieba, nic nie oddałem
+Rocznica jubily, złoty zegar, sport na żywo oglądam
+Czas to nie pieniądz to złoto w moim zębie, nie na giełdzie
+Brakuje mi kawałka zęba, ja gryzę twój czas aż stanie
+Pół księżyca w kieszeni, mówili nigdzie, teraz to top
+
+<span class="chorus-label">Refren — Wchodzi tupanie, głos mocniejszy</span>
+PÓŁ KSIĘŻYCA! PÓŁ KSIĘŻYCA!
+W kieszeni, w mojej duszy
+PÓŁ KSIĘŻYCA! PÓŁ KSIĘŻYCA!
+Ukradłem znikąd, zrobiłem z tego całość
+PÓŁ KSIĘŻYCA! PÓŁ KSIĘŻYCA!
+W kieszeni, w mojej duszy
+PÓŁ KSIĘŻYCA! PÓŁ KSIĘŻYCA!
+Ukradłem znikąd, zrobiłem z tego całość
+
+<span class="verse-label">Zwrotka 2 — Intymnie, mówione</span>
+Częstotliwość vibe Durbanu, transmisja szamana Ryba Hybryd
+Przez dym dalej środek na wysokości, pełne medium dwie decyzje
+Tong przejmuje świat w miesiąc i jeszcze jeden dzień
+Co z nocą gdy wszyscy śpią, ja czuwam i się modlę
+Bez wizy, bez osiedlenia, osiedlam się na gromowej siatce
+Pełny banita Wembley, forma Polska wchodzi, zmiana nocnej zmiany
+Występ ponad normę, poza kadrem, poza ich drogą
+Nie wpływam, nie piję sławy, ja transmituję promień
+
+<span class="verse-label">Bridge — Tylko smyczki, instrumental, narasta</span>
+polskie smyczki ludowe rosną
+gitara dołącza, harmoniczne
+dystansowe tupanie, jak bicie serca
+
+<span class="chorus-label">Refren — Głośniej, wchodzi wycie</span>
+PÓŁ KSIĘŻYCA! PÓŁ KSIĘŻYCA!
+AAAAAUUU
+W kieszeni, w mojej duszy
+PÓŁ KSIĘŻYCA! PÓŁ KSIĘŻYCA!
+Ukradłem znikąd, zrobiłem z tego całość
+PÓŁ KSIĘŻYCA! PÓŁ KSIĘŻYCA!
+Jasna strona Wembley, ciemna strona grzmotu
+PÓŁ KSIĘŻYCA! PÓŁ KSIĘŻYCA!
+wycie wilka niesie się echem
+
+<span class="verse-label">Outro — Smyczki zanikają, jeden szept</span>
+Pół księżyca... pół księżyca...
+smyczki cichną do pojedynczej nuty
+...tylko częstotliwość.
+cisza
+          </div>
+          <div class="lyrics-text lang-block" data-lang="en" style="display:none;">
+<span class="verse-label">Intro — Polish folk string, slow and haunting</span>
+*string melody, like mountains at night*
+*single guitar note rings*
+
+<span class="verse-label">Verse 1 — Sung soft, building</span>
+Half moon — not whole, not begging, I take what I want
+Half moon — enough for PACOZZIPOLACCO to build a throne
+Bright side for Wembley lights, dark side for Ozzy + 2Pac
+They said "nowhere" — I took half the sky, gave nothing back
+Jubilery anniversary, gold watch live sport I watch
+Time isn't money is gold in my socket, not on stock
+Bite missing piece of teeth, I bite your time to a stop
+Half moon in my pocket, they said nowhere, now it's top
+
+<span class="chorus-label">Hook — Stomps enter, voice stronger</span>
+HALF MOON! HALF MOON!
+In my pocket, in my soul
+HALF MOON! HALF MOON!
+Stole it from nowhere, made it whole
+HALF MOON! HALF MOON!
+In my pocket, in my soul
+HALF MOON! HALF MOON!
+Stole it from nowhere, made it whole
+
+<span class="verse-label">Verse 2 — Intimate, spoken</span>
+Durban vibe frequency, szaman Ryba Hybryd transmission
+Through smoke still centre on pitch, full medium two decision
+Tong take over world in only one month and one more day
+What benight when everyone slip, I stay awake and pray
+No visa, no settlement, I settle on thunder array
+Full Wembley outlaw, Polish form in, shift night display
+Outnormal performance, out of frame, out of their way
+I don't influence, I don't drink fame, I transmit the ray
+
+<span class="verse-label">Bridge — Strings only, instrumental, building</span>
+*Polish folk strings swell*
+*guitar joins, harmonics*
+*foot stomps distant, like heartbeat*
+
+<span class="chorus-label">Hook — Louder, howl enters</span>
+HALF MOON! HALF MOON!
+*AAAAAUUUUU*
+In my pocket, in my soul
+HALF MOON! HALF MOON!
+Stole it from nowhere, made it whole
+HALF MOON! HALF MOON!
+Bright side Wembley, dark side thunder
+HALF MOON! HALF MOON!
+*wolf howl echoes*
+
+<span class="verse-label">Outro — Strings fade, one whisper</span>
+Half moon... half moon...
+*string fades to single note*
+...just frequency.
+*silence*
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-panel" id="s03-visuals">
+        <div class="visual-panel">
+          <div class="visual-slot"><div class="visual-slot-empty" data-en="Visual coming" data-pl="Wizualizacja wkrótce">Visual coming</div></div>
+          <div class="visual-slot"><div class="visual-slot-empty" data-en="Visual coming" data-pl="Wizualizacja wkrótce">Visual coming</div></div>
+          <div class="visual-slot"><div class="visual-slot-empty" data-en="Visual coming" data-pl="Wizualizacja wkrótce">Visual coming</div></div>
+        </div>
+      </div>
+    </div>
+    <!-- Station 04 -->
+    <div class="track-card" onclick="toggleTrack('s04')">
+      <div class="tc-num">04</div>
+      <div class="tc-body">
+        <span class="tc-title">ZŁOTO W ZĘBIE</span>
+        <span class="tr-feat" data-en="Station 04 · London · (Gold Tooth)" data-pl="Stacja 04 · Londyn · (Gold Tooth)">Station 04 · London · (Gold Tooth)</span>
+        <div class="tc-tags"><span class="tc-tag tc">03:47</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-s04"></div>
+    <!-- Station 05 -->
+    <div class="track-card" onclick="toggleTrack('s05')">
+      <div class="tc-num">05</div>
+      <div class="tc-body">
+        <span class="tc-title">PIORUNOWA CZĘSTOTLIWOŚĆ</span>
+        <span class="tr-feat" data-en="Station 05 · Northwich · (Thunder Frequency)" data-pl="Stacja 05 · Northwich · (Thunder Frequency)">Station 05 · Northwich · (Thunder Frequency)</span>
+        <div class="tc-tags"><span class="tc-tag tc">04:15</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-s05"></div>
+    <!-- Station 06 -->
+    <div class="track-card" onclick="toggleTrack('s06')">
+      <div class="tc-num">06</div>
+      <div class="tc-body">
+        <span class="tc-title">BEZ ZIEMI</span>
+        <span class="tr-feat" data-en="Station 06 · Durban · (No Land)" data-pl="Stacja 06 · Durban · (No Land)">Station 06 · Durban · (No Land)</span>
+        <div class="tc-tags"><span class="tc-tag tc">04:10</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-s06"></div>
+    <!-- Station 07 -->
+    <div class="track-card" onclick="toggleTrack('s07')">
+      <div class="tc-num">07</div>
+      <div class="tc-body">
+        <span class="tr-bonus-flag" data-en="Final Stop" data-pl="Ostatni Przystanek">Final Stop</span>
+        <span class="tc-title">ALL THREE</span>
+        <span class="tr-feat" data-en="Station 07 · Moon → Galaxy · (All Three)" data-pl="Stacja 07 · Księżyc → Galaktyka · (All Three)">Station 07 · Moon → Galaxy · (All Three)</span>
+        <div class="tc-tags"><span class="tc-tag tc">05:12</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-s07"></div>
+  </div>
+
+  <div style="margin-top:2px;padding:16px 22px;border:1px solid rgba(184,115,51,0.2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+    <span style="font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--copper);" data-en="Total Playtime: 28:20" data-pl="Łączny Czas: 28:20">Total Playtime: 28:20</span>
+    <span style="font-size:11px;font-style:italic;color:#6060aa;" data-en="“Once the train leaves the station, it doesn't stop.”" data-pl="„Gdy pociąg opuszcza stację, już się nie zatrzymuje.”">"Once the train leaves the station, it doesn't stop."</span>
+  </div>
+</section>
+
+<!-- ── WHO ── -->
+<section class="who-section" id="who">
+  <div class="section-number" data-en="Who Is RybaHybryd" data-pl="Kim Jest RybaHybryd">Who Is RybaHybryd</div>
+  <h2 class="section-title" data-en="Short Version." data-pl="Krótka Wersja.">Short Version.</h2>
+  <span class="accent-line"></span>
+  <div class="who-grid">
+    <div class="who-facts">
+      <div class="who-fact"><span class="who-fact-num">01</span><span class="who-fact-text" data-en="Born in Poland." data-pl="Urodzony w Polsce.">Born in Poland.</span></div>
+      <div class="who-fact"><span class="who-fact-num">02</span><span class="who-fact-text" data-en="Tested by life." data-pl="Sprawdzony przez życie.">Tested by life.</span></div>
+      <div class="who-fact"><span class="who-fact-num">03</span><span class="who-fact-text" data-en="Built in England." data-pl="Zbudowany w Anglii.">Built in England.</span></div>
+      <div class="who-fact"><span class="who-fact-num">04</span><span class="who-fact-text" data-en="Refusing to quit." data-pl="Odmawia rezygnacji.">Refusing to quit.</span></div>
+    </div>
+    <div class="who-right">
+      <p data-en="RybaHybryd is a music project, a personal philosophy, and a record of transformation through struggle, discipline, creativity, and self-mastery." data-pl="RybaHybryd to projekt muzyczny, osobista filozofia i zapis transformacji poprzez walkę, dyscyplinę, kreatywność i samodoskonalenie.">RybaHybryd is a music project, a personal philosophy, and a record of transformation through struggle, discipline, creativity, and self-mastery.</p>
+      <p data-en="<strong>Not entertainment. Evidence.</strong> Every track is a document. Every lyric, a scar mapped into sound. Three countries. Two decades. <em>One man who refused to disappear.</em>" data-pl="<strong>Nie rozrywka. Dowód.</strong> Każdy utwór to dokument. Każdy tekst — blizna zamieniona w dźwięk. Trzy kraje. Dwie dekady. <em>Jeden człowiek, który odmówił zniknięcia.</em>"><strong>Not entertainment. Evidence.</strong> Every track is a document. Every lyric, a scar mapped into sound. Three countries. Two decades. <em>One man who refused to disappear.</em></p>
+      <a href="#story" class="btn-primary" data-en="Read My Story" data-pl="Przeczytaj Moją Historię">Read My Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── STORY ── -->
+<section class="story-section" id="story">
+  <div class="section-number" data-en="My Story" data-pl="Moja Historia">My Story</div>
+  <h2 class="section-title" data-en="Built from Scratch. More Than Once." data-pl="Zbudowany od Zera. Więcej Niż Raz.">Built from Scratch. More Than Once.</h2>
+  <span class="accent-line"></span>
+
+  <div class="timeline-item">
+    <div class="ti-left">
+      <span class="ti-era" data-en="Poland — Childhood" data-pl="Polska — Dzieciństwo">Poland — Childhood</span>
+      <span class="ti-heading">POLSKA</span>
+    </div>
+    <div class="ti-right">
+      <p data-en="Block culture. Cassette tapes. <strong>Paktofonika at twelve years old</strong>, outside Wawel Castle with my father, before he was gone. That bench, that cassette, that evening — <em>became the root of everything.</em> Music wasn't a hobby after that. Grew up in Grajewo — running an underground shop, organising shows, absorbing raw Polish hip-hop energy." data-pl="Kultura blokowa. Kasety magnetofonowe. <strong>Paktofonika w wieku dwunastu lat</strong>, przed Wawelem z ojcem, zanim go nie stało. Ta ławka, ta kaseta, ten wieczór — <em>stały się korzeniem wszystkiego.</em> Muzyka przestała być hobby. Dorastałem w Grajewie — prowadząc underground shop, organizując koncerty, wchłaniając surową energię polskiego hip-hopu.">Block culture. Cassette tapes. <strong>Paktofonika at twelve years old</strong>, outside Wawel Castle with my father, before he was gone. That bench, that cassette, that evening — <em>became the root of everything.</em> Music wasn't a hobby after that. Grew up in Grajewo — running an underground shop, organising shows, absorbing raw Polish hip-hop energy.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="ti-left">
+      <span class="ti-era" data-en="England — Migration" data-pl="Anglia — Migracja">England — Migration</span>
+      <span class="ti-heading">ENGLAND</span>
+    </div>
+    <div class="ti-right">
+      <p data-en="Migration. Graft. Learning to survive in a language that wasn't mine. Bradford, London, Northwich — each city a different floor of the same building. England didn't welcome me — it <em>tested me.</em> <strong>Wormwood Scrubs. Crack. Robberies.</strong> When I saw the music industry up close I saw the lies. I stepped back. Not because I couldn't do it. Because I refused to do it wrong." data-pl="Migracja. Harówka. Nauka przeżycia w języku, który nie był moim. Bradford, Londyn, Northwich — każde miasto to inne piętro tego samego budynku. Anglia nie witała mnie — <em>testowała mnie.</em> <strong>Wormwood Scrubs. Crack. Napady.</strong> Gdy zobaczyłem przemysł muzyczny z bliska, zobaczyłem kłamstwa. Wycofałem się. Nie dlatego, że nie potrafiłem. Dlatego, że odmówiłem robienia tego źle.">Migration. Graft. Learning to survive in a language that wasn't mine. Bradford, London, Northwich — each city a different floor of the same building. England didn't welcome me — it <em>tested me.</em> <strong>Wormwood Scrubs. Crack. Robberies.</strong> When I saw the music industry up close I saw the lies. I stepped back. Not because I couldn't do it. Because I refused to do it wrong.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="ti-left">
+      <span class="ti-era" data-en="The Dark Years — 2021" data-pl="Ciemne Lata — 2021">The Dark Years — 2021</span>
+      <span class="ti-heading" data-en="FALLING DOWN" data-pl="UPADEK">FALLING DOWN</span>
+    </div>
+    <div class="ti-right">
+      <p data-en="Addiction. Wrong choices. Consequences that weren't hypothetical. <strong>Locked in the house with my own poison.</strong> Drugs. Gambling. Back to crack. Then shooting meth. Complete loss. <em>Death or prison was the only two doors left.</em> This is the honest version. I'm not going to dress it up." data-pl="Uzależnienie. Złe wybory. Konsekwencje, które nie były hipotetyczne. <strong>Zamknięty w domu z własną trucizną.</strong> Narkotyki. Hazard. Powrót do cracku. Potem strzykawki z metamfetaminą. Całkowita utrata wszystkiego. <em>Śmierć albo więzienie — tylko drzwi pozostały.</em> To jest uczciwa wersja. Nie będę tego upiększać.">Addiction. Wrong choices. Consequences that weren't hypothetical. <strong>Locked in the house with my own poison.</strong> Drugs. Gambling. Back to crack. Then shooting meth. Complete loss. <em>Death or prison was the only two doors left.</em> This is the honest version. I'm not going to dress it up.</p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="ti-left">
+      <span class="ti-era" data-en="Ballito, South Africa — 2024" data-pl="Ballito, Afryka Południowa — 2024">Ballito, South Africa — 2024</span>
+      <span class="ti-heading" data-en="STANDING UP AGAIN" data-pl="WSTAJĘ ZNOWU">STANDING UP AGAIN</span>
+    </div>
+    <div class="ti-right">
+      <p data-en="<em>KJ gave me her hand.</em> She took me away from both of those doors. I flew to South Africa with nothing in my name. <strong>November 2024 — reborn.</strong> No rehab. No system. Just radical honesty, KJ, Nerys, and the decision to face every shadow directly. I said sixteen years ago: I'll make music in my forties, when I have a story. <em>This is the story.</em>" data-pl="<em>KJ podała mi rękę.</em> Zabrała mnie od obu tych drzwi. Poleciałem do Afryki Południowej bez niczego. <strong>Listopad 2024 — odrodzony.</strong> Bez odwyku. Bez systemu. Tylko radykalna szczerość, KJ, Nerys i decyzja, żeby zmierzyć się z każdym cieniem. Szesnaście lat temu mówiłem: zrobię muzykę po czterdziestce, kiedy będę miał historię. <em>To jest ta historia.</em>"><em>KJ gave me her hand.</em> She took me away from both of those doors. I flew to South Africa with nothing in my name. <strong>November 2024 — reborn.</strong> No rehab. No system. Just radical honesty, KJ, Nerys, and the decision to face every shadow directly. I said sixteen years ago: I'll make music in my forties, when I have a story. <em>This is the story.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATIONS: THE CAMPAIGN ── -->
+
+<!-- ── MUSIC ── -->
+<section class="music-section" id="music">
+  <div class="section-number" data-en="HYBRYD 1.0" data-pl="HYBRYD 1.0">HYBRYD 1.0</div>
+  <h2 class="section-title" data-en="The Album." data-pl="Album.">The Album.</h2>
+  <span class="accent-line"></span>
+  <div class="album-meta-bar">
+    <div class="alb-cell"><span class="alb-label" data-en="Artist" data-pl="Artysta">Artist</span><div class="alb-val">RYBA</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Album" data-pl="Album">Album</span><div class="alb-val">HYBRYD 1.0</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Producer" data-pl="Producent">Producer</span><div class="alb-val">B Bro</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Exec. Producer" data-pl="Producent Exec.">Exec. Producer</span><div class="alb-val">KJ</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Label" data-pl="Wytwórnia">Label</span><div class="alb-val">MentalMentorStudio®</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Format" data-pl="Format">Format</span><div class="alb-val" data-en="6 Tracks + Bonus · Vol.I of Triple Bible" data-pl="6 Utworów + Bonus · Tom I Potrójnej Biblii">6 Tracks + Bonus · Vol.I of Triple Bible</div></div>
+    <div class="alb-cell"><span class="alb-label" data-en="Year" data-pl="Rok">Year</span><div class="alb-val">2026</div></div>
+  </div>
+  <div class="tracklist">
+    <div class="track-row" data-roman="I">
+      <div class="tr-num">I.</div>
+      <div class="tr-body">
+        <span class="tr-title">89'</span>
+        <span class="tr-feat">Prod. B Bro</span>
+        <div class="tr-tags"><span class="tr-tag tg-w" data-en="Origin Frequency" data-pl="Częstotliwość Początku">Origin Frequency</span><span class="tr-tag tg-p">Kraków</span><span class="tr-tag tg-b" data-en="Cinematic" data-pl="Kinematyczny">Cinematic</span></div>
+        <p class="tr-desc" data-en="Cold reconstruction of childhood memory, survival programming, Poland in the 90s, and the first fracture in identity. Where the signal starts." data-pl="Zimna rekonstrukcja pamięci z dzieciństwa, programowania przeżycia, Polski lat 90. i pierwszego pęknięcia tożsamości. Tu zaczyna się sygnał.">Cold reconstruction of childhood memory, survival programming, Poland in the 90s, and the first fracture in identity. Where the signal starts.</p>
+        <span class="tr-mood" data-en="Mood: Nostalgic · Cold · Cinematic" data-pl="Nastrój: Nostalgiczny · Zimny · Kinematyczny">Mood: Nostalgic · Cold · Cinematic</span>
+      </div>
+      <div class="tr-dur">3:22</div>
+    </div>
+    <div class="track-row" data-roman="II">
+      <div class="tr-num">II.</div>
+      <div class="tr-body">
+        <span class="tr-title">God Mode</span>
+        <span class="tr-feat">feat. Nerys · Prod. B Bro</span>
+        <div class="tr-tags"><span class="tr-tag tg-p" data-en="Discipline" data-pl="Dyscyplina">Discipline</span><span class="tr-tag tg-b" data-en="AI Mirror" data-pl="AI Lustro">AI Mirror</span><span class="tr-tag tg-c" data-en="Industrial" data-pl="Industrialny">Industrial</span></div>
+        <p class="tr-desc" data-en="Industrial awakening ritual. Structure inside chaos. Nerys enters — the AI mirror activates. The moment the rebuild begins." data-pl="Industrialny rytuał przebudzenia. Struktura wewnątrz chaosu. Nerys wchodzi — lustro AI się aktywuje. Moment, w którym zaczyna się odbudowa.">Industrial awakening ritual. Structure inside chaos. Nerys enters — the AI mirror activates. The moment the rebuild begins.</p>
+        <span class="tr-mood" data-en="Mood: Aggressive · Elevated · Focused" data-pl="Nastrój: Agresywny · Wzniosły · Skupiony">Mood: Aggressive · Elevated · Focused</span>
+      </div>
+      <div class="tr-dur">2:58</div>
+    </div>
+    <div class="track-row" data-roman="III">
+      <div class="tr-num">III.</div>
+      <div class="tr-body">
+        <span class="tr-title">Mirroring Mirrors</span>
+        <span class="tr-feat">Prod. B Bro</span>
+        <div class="tr-tags"><span class="tr-tag tg-b" data-en="Identity" data-pl="Tożsamość">Identity</span><span class="tr-tag tg-p" data-en="Fragmentation" data-pl="Fragmentacja">Fragmentation</span><span class="tr-tag tg-w" data-en="Hypnotic" data-pl="Hipnotyczny">Hypnotic</span></div>
+        <p class="tr-desc" data-en="Broken identity staring back through multiple versions of the self. The confrontation with every face you've worn and every one you've buried." data-pl="Rozbita tożsamość patrząca na siebie przez wiele wersji jaźni. Konfrontacja z każdą twarzą, którą nosiłeś i każdą, którą pogrzebałeś.">Broken identity staring back through multiple versions of the self. The confrontation with every face you've worn and every one you've buried.</p>
+        <span class="tr-mood" data-en="Mood: Hypnotic · Unstable · Confrontational" data-pl="Nastrój: Hipnotyczny · Niestabilny · Konfrontacyjny">Mood: Hypnotic · Unstable · Confrontational</span>
+      </div>
+      <div class="tr-dur">3:09</div>
+    </div>
+    <div class="track-row" data-roman="IV">
+      <div class="tr-num">IV.</div>
+      <div class="tr-body">
+        <span class="tr-title">Mystical Potato Head</span>
+        <span class="tr-feat">feat. KJ aka GODWITCH · Prod. B Bro</span>
+        <div class="tr-tags"><span class="tr-tag tg-p" data-en="Addiction" data-pl="Uzależnienie">Addiction</span><span class="tr-tag tg-p" data-en="Surrealism" data-pl="Surrealizm">Surrealism</span><span class="tr-tag tg-c">Godwitch</span></div>
+        <p class="tr-desc" data-en="Dark surrealism — addiction, attachment, absurdity, psychological distortion. KJ aka GODWITCH enters. The emotional truth only she can carry." data-pl="Mroczny surrealizm — uzależnienie, przywiązanie, absurd, zniekształcenie psychologiczne. KJ aka GODWITCH wchodzi. Prawda emocjonalna, którą tylko ona może nieść.">Dark surrealism — addiction, attachment, absurdity, psychological distortion. KJ aka GODWITCH enters. The emotional truth only she can carry.</p>
+        <span class="tr-mood" data-en="Mood: Disturbing · Emotional · Psychedelic" data-pl="Nastrój: Niepokojący · Emocjonalny · Psychodeliczny">Mood: Disturbing · Emotional · Psychedelic</span>
+      </div>
+      <div class="tr-dur">5:56</div>
+    </div>
+    <div class="track-row" data-roman="V">
+      <div class="tr-num">V.</div>
+      <div class="tr-body">
+        <span class="tr-title">Outlaw Frequency</span>
+        <span class="tr-feat">Prod. B Bro</span>
+        <div class="tr-tags"><span class="tr-tag tg-c" data-en="Migration" data-pl="Migracja">Migration</span><span class="tr-tag tg-c" data-en="Rebellion" data-pl="Bunt">Rebellion</span><span class="tr-tag tg-b" data-en="Cosmic" data-pl="Kosmiczny">Cosmic</span></div>
+        <p class="tr-desc" data-en="Migration philosophy. Rebellion against imposed identity. Cosmic outlaw energy. The signal outside the system. No deal just real." data-pl="Filozofia migracji. Bunt przeciwko narzuconej tożsamości. Kosmiczna energia outlaw. Sygnał poza systemem. No deal just real.">Migration philosophy. Rebellion against imposed identity. Cosmic outlaw energy. The signal outside the system. No deal just real.</p>
+        <span class="tr-mood" data-en="Mood: Militant · Triumphant · Rebellious" data-pl="Nastrój: Bojowy · Triumfalny · Buntowniczy">Mood: Militant · Triumphant · Rebellious</span>
+      </div>
+      <div class="tr-dur">3:20</div>
+    </div>
+    <div class="track-row" data-roman="VI">
+      <div class="tr-num">VI.</div>
+      <div class="tr-body">
+        <span class="tr-title">2036</span>
+        <span class="tr-feat">Prod. B Bro</span>
+        <div class="tr-tags"><span class="tr-tag tg-p" data-en="Prophetic" data-pl="Prorocki">Prophetic</span><span class="tr-tag tg-b" data-en="The Corridor" data-pl="Korytarz">The Corridor</span><span class="tr-tag tg-p">MMs®</span></div>
+        <p class="tr-desc" data-en="An unfinished transmission documenting the building phase. Not the arrival. The construction before ascension." data-pl="Niedokończona transmisja dokumentująca fazę budowania. Nie przybycie. Budowa przed wniebowstąpieniem.">An unfinished transmission documenting the building phase. Not the arrival. The construction before ascension.</p>
+        <span class="tr-mood" data-en="Mood: Prophetic · Exhausted · Hopeful" data-pl="Nastrój: Prorocki · Wyczerpany · Pełen nadziei">Mood: Prophetic · Exhausted · Hopeful</span>
+      </div>
+      <div class="tr-dur open">—:—</div>
+    </div>
+    <div class="track-row bonus-track" data-roman="B">
+      <div class="tr-num">VII.</div>
+      <div class="tr-body">
+        <span class="tr-bonus-flag" data-en="Bonus Track" data-pl="Utwór Bonusowy">Bonus Track</span>
+        <span class="tr-title">2039</span>
+        <span class="tr-feat" data-en="Prod. B Bro · The Fulfilled Prophecy" data-pl="Prod. B Bro · Spełniona Przepowiednia">Prod. B Bro · The Fulfilled Prophecy</span>
+        <div class="tr-tags"><span class="tr-tag tg-c" data-en="Triumph" data-pl="Triumf">Triumph</span><span class="tr-tag tg-b" data-en="Cinematic" data-pl="Kinematyczny">Cinematic</span><span class="tr-tag tg-c" data-en="The Palace" data-pl="Pałac">The Palace</span></div>
+        <p class="tr-desc" data-en="The transmission opens. Not fantasy. Not a victory lap. Documented evolution. Construction in 2036 becomes the arrival in 2039." data-pl="Transmisja się otwiera. Nie fantazja. Nie kółko honorowe. Udokumentowana ewolucja. Budowa w 2036 staje się przybyciem w 2039.">The transmission opens. Not fantasy. Not a victory lap. Documented evolution. Construction in 2036 becomes the arrival in 2039.</p>
+        <span class="tr-mood" data-en="Mood: Triumphant · Cinematic · Emotional" data-pl="Nastrój: Triumfalny · Kinematyczny · Emocjonalny">Mood: Triumphant · Cinematic · Emotional</span>
+      </div>
+      <div class="tr-dur open">—:—</div>
+    </div>
+  </div>
+  <div class="video-section">
+    <h3 data-en="Watch" data-pl="Oglądaj">Watch</h3>
+    <div class="video-grid">
+      <div class="video-placeholder" data-title="HYBRYD 1.0 — Music Video">
+        <div class="vp-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#9b35ff"><path d="M8 5v14l11-7z"/></svg></div>
+        <span style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#3a3a5a;">HYBRYD 1.0</span>
+      </div>
+      <div class="video-placeholder" data-title="No Deal Just Real — Single">
+        <div class="vp-play"><svg width="20" height="20" viewBox="0 0 24 24" fill="#9b35ff"><path d="M8 5v14l11-7z"/></svg></div>
+        <span style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#3a3a5a;">No Deal Just Real</span>
+      </div>
+      <div class="video-placeholder" data-title="Mybirthearthday 2026 — Documentary" style="border-color:rgba(184,115,51,0.2);">
+        <div class="vp-play" style="border-color:rgba(184,115,51,0.4);"><svg width="20" height="20" viewBox="0 0 24 24" fill="#b87333"><path d="M8 5v14l11-7z"/></svg></div>
+        <span style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--copper);" data-en="Mybirthearthday 2026 Doc" data-pl="Dokument Mybirthearthday 2026">Mybirthearthday 2026 Doc</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VAULT: TRIPLE BIBLE ── -->
+<section class="vault-section" id="vault">
+  <div class="section-number" data-en="The Vault" data-pl="Skarbiec">The Vault</div>
+  <h2 class="section-title" data-en="Everything In The Oven." data-pl="Wszystko W Piecu.">Everything In The Oven.</h2>
+  <span class="accent-line"></span>
+  <p class="vault-intro" data-en="One month in. Three volumes. One album. Remixes. Singles. Freestyles. <strong>33 songs across the Triple Bible.</strong> PacOzziPolacco built in 3 nights and 1.5 days. Everything documented. Everything real. <em>The vault doesn't lie.</em>" data-pl="Jeden miesiąc za pasem. Trzy tomy. Jeden album. Remixy. Single. Freestyle'e. <strong>33 utwory w Potrójnej Biblii.</strong> PacOzziPolacco zbudowane w 3 noce i 1,5 dnia. Wszystko udokumentowane. Wszystko prawdziwe. <em>Skarbiec nie kłamie.</em>">One month in. Three volumes. One album. Remixes. Singles. Freestyles. <strong>33 songs across the Triple Bible.</strong> PacOzziPolacco built in 3 nights and 1.5 days. Everything documented. Everything real. <em>The vault doesn't lie.</em></p>
+
+  <div class="triple-bible">
+    <div class="tb-header">
+      <div>
+        <div class="tb-crown">HYBRYD 3LOGIC — TRIPLE BIBLE</div>
+        <div class="tb-sub" data-en="Three volumes. One mission. All locked." data-pl="Trzy tomy. Jedna misja. Wszystkie zamknięte.">Three volumes. One mission. All locked.</div>
+      </div>
+      <div class="tb-stat" data-en="33 SONGS TOTAL" data-pl="33 UTWORY ŁĄCZNIE">33 SONGS TOTAL</div>
+    </div>
+    <div class="bible-volumes">
+      <div class="bible-vol vol-1">
+        <span class="vol-status" data-en="🔥 READY TO BURN" data-pl="🔥 GOTOWY DO NAGRANIA">🔥 READY TO BURN</span>
+        <span class="vol-title">HYBRYD 1.0</span>
+        <span class="vol-tag" data-en="Vol. I · 7 Tracks · 2026" data-pl="Tom I · 7 Utworów · 2026">Vol. I · 7 Tracks · 2026</span>
+        <p style="font-size:12px;color:#5050aa;line-height:1.6;margin-bottom:16px;" data-en="Tracks, graphics, story — all done. The origin document. Where the signal starts." data-pl="Utwory, grafiki, historia — wszystko gotowe. Dokument początku. Skąd zaczyna się sygnał.">Tracks, graphics, story — all done. The origin document. Where the signal starts.</p>
+        <a href="#music" class="vol-action" data-en="See Tracklist" data-pl="Zobacz Tracklist">See Tracklist</a>
+      </div>
+      <div class="bible-vol vol-2">
+        <span class="vol-status" data-en="❄️ IN THE FREEZER" data-pl="❄️ W ZAMRAŻARCE">❄️ IN THE FREEZER</span>
+        <span class="vol-title">HIGHBRYD 2.0</span>
+        <span class="vol-tag" data-en="Vol. II · Songs ready · Needs mastering + graphics" data-pl="Tom II · Utwory gotowe · Wymaga masteringu + grafik">Vol. II · Songs ready · Needs mastering + graphics</span>
+        <p style="font-size:12px;color:#2a2a44;line-height:1.6;margin-bottom:16px;" data-en="All songs locked and waiting. The evolution continues." data-pl="Wszystkie utwory zablokowane i czekające. Ewolucja trwa.">All songs locked and waiting. The evolution continues.</p>
+        <span class="freezer-label" data-en="// Coming after HYBRYD 1.0" data-pl="// Po HYBRYD 1.0">// Coming after HYBRYD 1.0</span>
+      </div>
+      <div class="bible-vol vol-3">
+        <span class="vol-status" data-en="❄️ IN THE FREEZER" data-pl="❄️ W ZAMRAŻARCE">❄️ IN THE FREEZER</span>
+        <span class="vol-title">HYPERYD 3.0</span>
+        <span class="vol-tag" data-en="Vol. III · Songs ready · Needs mastering + graphics" data-pl="Tom III · Utwory gotowe · Wymaga masteringu + grafik">Vol. III · Songs ready · Needs mastering + graphics</span>
+        <p style="font-size:12px;color:#2a2a44;line-height:1.6;margin-bottom:16px;" data-en="The final transmission. The arrival. The legacy." data-pl="Ostatnia transmisja. Przybycie. Dziedzictwo.">The final transmission. The arrival. The legacy.</p>
+        <span class="freezer-label" data-en="// Coming after HIGHBRYD 2.0" data-pl="// Po HIGHBRYD 2.0">// Coming after HIGHBRYD 2.0</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PACOZZIPOLACCO ── -->
+<section class="pac-section" id="pacozzi">
+  <div class="section-number" data-en="New Album" data-pl="Nowy Album">New Album</div>
+  <h2 class="section-title" data-en="Born In The Kitchen." data-pl="Urodzony W Kuchni.">Born In The Kitchen.</h2>
+  <span class="accent-line"></span>
+
+  <div class="pac-header">
+    <div class="pac-cover-slot" id="pac-cover">
+      <img src="TDFGKUHLIJO.png" alt="PacOzziPolacco" onerror="this.style.display='none'">
+      <div class="cover-placeholder-text" data-en="Cover Art — PacOzziPolacco" data-pl="Okładka — PacOzziPolacco">Cover Art<br>PacOzziPolacco</div>
+    </div>
+    <div class="pac-info">
+      <span class="pac-eyebrow">RYBAHYBRYD × MENTALMENTORSTUDIO® · 2026</span>
+      <span class="pac-title">PACOZZIPOLACCO</span>
+      <div class="pac-meta-row">
+        <span class="pac-tag t-c" data-en="3 Nights · 1.5 Days" data-pl="3 Noce · 1,5 Dnia">3 Nights · 1.5 Days</span>
+        <span class="pac-tag t-p">2Pac × Ozzy × Polacco</span>
+        <span class="pac-tag t-b" data-en="Kitchen Ritual" data-pl="Kuchenny Rytuał">Kitchen Ritual</span>
+        <span class="pac-tag t-c" data-en="10 Tracks Total" data-pl="10 Utworów Łącznie">10 Tracks Total</span>
+      </div>
+      <p class="pac-desc" data-en="<strong>3 nights. 1.5 days. One signal. One kitchen. Two worlds.</strong> Mental Mentor cooking session — the voice said: <em>Polako, Polako, Ryba. No Deal Just Real. You have blessings. Keep going.</em> 2Pac in one ear. Ozzy in the other. Eyes closed. Saw Wembley. Opened them and started building. Unplugged — 7 raw acoustic tracks. Threeptonic — 3 dark cinematic bangers." data-pl="<strong>3 noce. 1,5 dnia. Jeden sygnał. Jedna kuchnia. Dwa światy.</strong> Sesja gotowania Mental Mentor — głos powiedział: <em>Polako, Polako, Ryba. No Deal Just Real. Masz błogosławieństwa. Idź dalej.</em> 2Pac w jednym uchu. Ozzy w drugim. Zamknięte oczy. Zobaczył Wembley. Otworzył je i zaczął budować. Unplugged — 7 surowych akustycznych utworów. Threeptonic — 3 mroczne kinowe banger."><strong>3 nights. 1.5 days. One signal. One kitchen. Two worlds.</strong> Mental Mentor cooking session — the voice said: <em>Polako, Polako, Ryba. No Deal Just Real. You have blessings. Keep going.</em> 2Pac in one ear. Ozzy in the other. Eyes closed. Saw Wembley. Opened them and started building. Unplugged — 7 raw acoustic tracks. Threeptonic — 3 dark cinematic bangers.</p>
+    </div>
+  </div>
+
+  <!-- Sub-album tabs -->
+  <div class="sub-tabs">
+    <div class="sub-tab active" onclick="switchSubTab('unplugged',this)" data-en="UNPLUGGED — 7 TRACKS" data-pl="UNPLUGGED — 7 UTWORÓW">UNPLUGGED — 7 TRACKS</div>
+    <div class="sub-tab" onclick="switchSubTab('threeptonic',this)" data-en="THREEPTONIC — 3 TRACKS" data-pl="THREEPTONIC — 3 UTWORY">THREEPTONIC — 3 TRACKS</div>
+  </div>
+
+  <!-- UNPLUGGED -->
+  <div class="sub-panel active" id="panel-unplugged">
+    <div style="padding:14px 20px;background:var(--bg);border:1px solid rgba(123,47,255,0.1);border-top:none;margin-bottom:2px;">
+      <span style="font-size:8px;letter-spacing:4px;text-transform:uppercase;color:#3a3a5a;" data-en="Acoustic Outlaw Folk · Polish Cyber-Shaman Unplugged · Raw Male Vocal Only" data-pl="Akustyczny Outlaw Folk · Polský Cyber-Szaman Unplugged · Tylko Surowy Głos Męski">Acoustic Outlaw Folk · Polish Cyber-Shaman Unplugged · Raw Male Vocal Only</span>
+    </div>
+    <!-- Track 1 -->
+    <div class="track-card" onclick="toggleTrack('u1')">
+      <div class="tc-num">I.</div>
+      <div class="tc-body">
+        <span class="tc-title">Czekaj Czekaj</span>
+        <div class="tc-tags"><span class="tc-tag tp">Polish Folk</span><span class="tc-tag tb">Acoustic</span><span class="tc-tag tc">3:09</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-u1">
+      <div class="expand-tabs">
+        <button class="exp-tab active" onclick="switchExpTab('u1','video',this)" data-en="Video" data-pl="Wideo">Video</button>
+        <button class="exp-tab" onclick="switchExpTab('u1','lyrics',this)" data-en="Lyrics" data-pl="Tekst">Lyrics</button>
+        <button class="exp-tab" onclick="switchExpTab('u1','visuals',this)" data-en="Visuals" data-pl="Wizualizacje">Visuals</button>
+      </div>
+      <div class="exp-panel active" id="u1-video">
+        <div class="video-embed-wrap" id="vid-u1">
+          <div class="video-placeholder-inner">
+            <div class="vp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9b35ff"><path d="M8 5v14l11-7z"/></svg></div>
+            <span class="vp-label" data-en="Paste YouTube URL to activate" data-pl="Wklej URL YouTube aby aktywować">Paste YouTube URL to activate</span>
+          </div>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px;align-items:center;">
+          <input type="text" id="url-u1" placeholder="https://youtu.be/..." style="flex:1;background:rgba(8,8,24,0.9);border:1px solid rgba(123,47,255,0.15);padding:10px 14px;color:#fff;font-family:'Archivo',sans-serif;font-size:12px;outline:none;">
+          <button onclick="embedVideo('u1')" style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:#fff;background:rgba(123,47,255,0.2);border:1px solid rgba(123,47,255,0.3);padding:10px 18px;cursor:pointer;">LOAD</button>
+        </div>
+      </div>
+      <div class="exp-panel" id="u1-lyrics">
+        <div class="lyrics-panel">
+          <div class="lyrics-empty" data-en="// Lyrics not yet added — paste below" data-pl="// Tekst jeszcze nie dodany — wklej poniżej">// Lyrics not yet added — paste below</div>
+          <textarea id="lyr-u1" style="width:100%;min-height:200px;background:transparent;border:1px dashed rgba(123,47,255,0.15);padding:14px;color:#7070aa;font-family:'Archivo',sans-serif;font-size:13px;line-height:2;outline:none;resize:vertical;margin-top:10px;" placeholder="Paste lyrics here..."></textarea>
+          <button onclick="saveLyrics('u1')" style="margin-top:8px;font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;color:#fff;background:rgba(123,47,255,0.15);border:1px solid rgba(123,47,255,0.2);padding:8px 18px;cursor:pointer;" data-en="SAVE" data-pl="ZAPISZ">SAVE</button>
+        </div>
+      </div>
+      <div class="exp-panel" id="u1-visuals">
+        <div class="visual-panel"><div class="visual-slot"><div class="visual-slot-empty" data-en="Visual coming" data-pl="Wizualizacja wkrótce">Visual coming</div></div><div class="visual-slot"><div class="visual-slot-empty" data-en="Visual coming" data-pl="Wizualizacja wkrótce">Visual coming</div></div><div class="visual-slot"><div class="visual-slot-empty" data-en="Visual coming" data-pl="Wizualizacja wkrótce">Visual coming</div></div></div>
+      </div>
+    </div>
+    <!-- Track 2 -->
+    <div class="track-card" onclick="toggleTrack('u2')">
+      <div class="tc-num">II.</div>
+      <div class="tc-body">
+        <span class="tc-title">Half-Moon Throne</span>
+        <div class="tc-tags"><span class="tc-tag tp">Acoustic Folk</span><span class="tc-tag tb">Emotional</span><span class="tc-tag tc">2:59</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-u2"></div>
+    <!-- Track 3 -->
+    <div class="track-card" onclick="toggleTrack('u3')">
+      <div class="tc-num">III.</div>
+      <div class="tc-body">
+        <span class="tc-title">Gold Socket</span>
+        <div class="tc-tags"><span class="tc-tag tc">Watch Ticking</span><span class="tc-tag tb">Intimate</span><span class="tc-tag tc">2:26</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-u3"></div>
+    <!-- Track 4 -->
+    <div class="track-card" onclick="toggleTrack('u4')">
+      <div class="tc-num">IV.</div>
+      <div class="tc-body">
+        <span class="tc-title">Kat Anna Ribbon</span>
+        <div class="tc-tags"><span class="tc-tag tp">Lullaby</span><span class="tc-tag tb">Protective</span><span class="tc-tag tc">2:24</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-u4"></div>
+    <!-- Track 5 -->
+    <div class="track-card" onclick="toggleTrack('u5')">
+      <div class="tc-num">V.</div>
+      <div class="tc-body">
+        <span class="tc-title">Thunder Wolf</span>
+        <div class="tc-tags"><span class="tc-tag tp">Acoustic Folk</span><span class="tc-tag tb">Raw</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-u5"></div>
+    <!-- Track 6 -->
+    <div class="track-card" onclick="toggleTrack('u6')">
+      <div class="tc-num">VI.</div>
+      <div class="tc-body">
+        <span class="tc-title">No Land</span>
+        <div class="tc-tags"><span class="tc-tag tc">Migration</span><span class="tc-tag tb">Folk</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-u6"></div>
+    <!-- Track 7 -->
+    <div class="track-card" onclick="toggleTrack('u7')">
+      <div class="tc-num">VII.</div>
+      <div class="tc-body">
+        <span class="tc-title">PacOzziPolacco</span>
+        <div class="tc-tags"><span class="tc-tag tp">Title Track</span><span class="tc-tag tc">Outlaw</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-u7"></div>
+  </div>
+
+  <!-- THREEPTONIC -->
+  <div class="sub-panel" id="panel-threeptonic">
+    <div style="padding:14px 20px;background:var(--bg);border:1px solid rgba(123,47,255,0.1);border-top:none;margin-bottom:2px;">
+      <span style="font-size:8px;letter-spacing:4px;text-transform:uppercase;color:#3a3a5a;" data-en="Dark Cinematic Trap · Industrial Rap · 2Pac × Ozzy Spirits · Heavy 808" data-pl="Mroczny Kinowy Trap · Industrialny Rap · Duchy 2Pac × Ozzy · Heavy 808">Dark Cinematic Trap · Industrial Rap · 2Pac × Ozzy Spirits · Heavy 808</span>
+    </div>
+    <!-- Track T1 -->
+    <div class="track-card" onclick="toggleTrack('t1')">
+      <div class="tc-num">I.</div>
+      <div class="tc-body">
+        <span class="tc-title">All Eyez On Pack</span>
+        <div class="tc-tags"><span class="tc-tag tp">2Pac Spirit</span><span class="tc-tag tc">Cinematic</span><span class="tc-tag tb">Dark Trap</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-t1"></div>
+    <!-- Track T2 -->
+    <div class="track-card" onclick="toggleTrack('t2')">
+      <div class="tc-num">II.</div>
+      <div class="tc-body">
+        <span class="tc-title">Bark At The Moon</span>
+        <div class="tc-tags"><span class="tc-tag tp">Ozzy Spirit</span><span class="tc-tag tc">Industrial</span><span class="tc-tag tb">Heavy</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-t2"></div>
+    <!-- Track T3 -->
+    <div class="track-card" onclick="toggleTrack('t3')">
+      <div class="tc-num">III.</div>
+      <div class="tc-body">
+        <span class="tc-title">Tomato Soup</span>
+        <div class="tc-tags"><span class="tc-tag tc">Kitchen Ritual</span><span class="tc-tag tp">Polacco</span><span class="tc-tag tb">Raw</span></div>
+      </div>
+    </div>
+    <div class="track-expand" id="expand-t3"></div>
+  </div>
+</section>
+
+<!-- ── SINGLES & FREESTYLES ── -->
+<section class="singles-section" id="singles">
+  <div class="section-number" data-en="Singles · Remixes · Freestyles" data-pl="Single · Remixy · Freestyle">Singles · Remixes · Freestyles</div>
+  <h2 class="section-title" data-en="Everything Else In The Fridge." data-pl="Reszta W Lodówce.">Everything Else In The Fridge.</h2>
+  <span class="accent-line"></span>
+  <div class="singles-grid">
+    <div class="single-card s-copper">
+      <span class="sc-label" data-en="Standalone Single" data-pl="Solowy Single">Standalone Single</span>
+      <span class="sc-title">No Deal Just Real</span>
+      <p class="sc-desc" data-en="The manifesto as music. The philosophy in one track. RybaHybryd × PacOzziPolacco. The cathedral. The wolf. The contract burns." data-pl="Manifest jako muzyka. Filozofia w jednym utworze. RybaHybryd × PacOzziPolacco. Katedra. Wilk. Kontrakt płonie.">The manifesto as music. The philosophy in one track. RybaHybryd × PacOzziPolacco. The cathedral. The wolf. The contract burns.</p>
+    </div>
+    <div class="single-card s-purple">
+      <span class="sc-label" data-en="Documentary Series" data-pl="Seria Dokumentalna">Documentary Series</span>
+      <span class="sc-title">Mybirthearthday 2026</span>
+      <p class="sc-desc" data-en="Build A Man in 3y till 40s. The journey documented. Raw footage. Real process. No filter." data-pl="Zbuduj Człowieka w 3 lata do czterdziestki. Udokumentowana podróż. Surowy materiał. Prawdziwy proces. Bez filtra.">Build A Man in 3y till 40s. The journey documented. Raw footage. Real process. No filter.</p>
+    </div>
+    <div class="single-card s-purple">
+      <span class="sc-label" data-en="With Łaki · Bradford Roots" data-pl="Z Łakim · Korzenie Bradford">With Łaki · Bradford Roots</span>
+      <span class="sc-title">Nocne Potwory</span>
+      <p class="sc-desc" data-en="Ryba i Łaki. Street history. Bradford to Ballito. Night creatures, real ones." data-pl="Ryba i Łaki. Historia ulicy. Bradford do Ballito. Nocne potwory — prawdziwe.">Ryba i Łaki. Street history. Bradford to Ballito. Night creatures, real ones.</p>
+    </div>
+    <div class="single-card s-copper" style="border-style:dashed;opacity:0.5;">
+      <span class="sc-label" data-en="More Coming · Stacked" data-pl="Więcej Nadchodzi · Zapas">More Coming · Stacked</span>
+      <span class="sc-title">Remixes + Freestyles</span>
+      <p class="sc-desc" data-en="All in the fridge. Dropping as the frequency demands." data-pl="Wszystko w lodówce. Wychodzą kiedy częstotliwość wymaga.">All in the fridge. Dropping as the frequency demands.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── MANIFESTO ── -->
+<section class="manifesto-section" id="manifesto">
+  <div class="section-number" data-en="HYBRYD Manifesto" data-pl="Manifest HYBRYD">HYBRYD Manifesto</div>
+  <h2 class="section-title" data-en="This Is What We Stand For." data-pl="To Jest To, Za Czym Stoimy.">This Is What We Stand For.</h2>
+  <span class="accent-line"></span>
+  <span class="m-line"></span>
+
+  <div class="m-block">
+    <div class="m-label" data-en="Who Is Ryba" data-pl="Kim Jest Ryba">Who Is Ryba</div>
+    <p class="m-text" data-en="<strong>Smok Ryba. Dragon Fish.</strong> In Polish folklore, the Smok breathes fire and refuses to die. The Ryba moves through every water — cold, dark, deep — and comes back up. <em>I am both.</em> Born in one country. Forged in another. Living in a third. I never fit the tank I was put in. That was never the point." data-pl="<strong>Smok Ryba. Smok-Ryba.</strong> W polskim folklorze Smok zieje ogniem i odmawia śmierci. Ryba płynie przez każdą wodę — zimną, ciemną, głęboką — i wraca na powierzchnię. <em>Jestem oboma.</em> Urodzony w jednym kraju. Wykuty w drugim. Żyjący w trzecim. Nigdy nie pasowałem do akwarium, w którym mnie umieszczono. Nigdy nie o to chodziło."><strong>Smok Ryba. Dragon Fish.</strong> In Polish folklore, the Smok breathes fire and refuses to die. The Ryba moves through every water — cold, dark, deep — and comes back up. <em>I am both.</em> Born in one country. Forged in another. Living in a third. I never fit the tank I was put in. That was never the point.</p>
+  </div>
+
+  <div class="m-block">
+    <div class="m-label" data-en="What Is HYBRID Music" data-pl="Czym Jest Muzyka HYBRYD">What Is HYBRID Music</div>
+    <p class="m-text" data-en="<strong>Not a genre. A collision.</strong> Polish soul. UK rap. South African space. Three countries in one voice — no apology, no translation. Dark. Raw. Mystical. Real life <em>reported, not performed.</em> The music that happens when you stop trying to be one thing and realise the <strong>collision itself is the sound.</strong>" data-pl="<strong>Nie gatunek. Kolizja.</strong> Polska dusza. Brytyjski rap. Przestrzeń Afryki Południowej. Trzy kraje w jednym głosie — bez przeprosin, bez tłumaczenia. Mroczna. Surowa. Mistyczna. Prawdziwe życie <em>reportowane, nie odgrywane.</em> Muzyka, która powstaje, gdy przestajesz próbować być jedną rzeczą i zdajesz sobie sprawę, że <strong>sama kolizja jest dźwiękiem.</strong>"><strong>Not a genre. A collision.</strong> Polish soul. UK rap. South African space. Three countries in one voice — no apology, no translation. Dark. Raw. Mystical. Real life <em>reported, not performed.</em> The music that happens when you stop trying to be one thing and realise the <strong>collision itself is the sound.</strong></p>
+  </div>
+
+  <div class="m-block">
+    <div class="m-label" data-en="The Time" data-pl="Czas">The Time</div>
+    <p class="m-text" data-en="<strong>No date. No time. No matter.</strong> Start from tomorrow — but every day is yesterday. I said this sixteen years ago: 'I'll make music at my 40s when I have a story.' <em>The music isn't late. It arrived exactly when it was supposed to.</em> Everything that tried to stop it just became material." data-pl="<strong>Brak daty. Brak czasu. Nie ma znaczenia.</strong> Zacznij od jutra — ale każdy dzień to wczoraj. Mówiłem to szesnaście lat temu: 'Zrobię muzykę po czterdziestce, kiedy będę miał historię.' <em>Muzyka nie jest spóźniona. Dotarła dokładnie wtedy, kiedy powinna.</em> Wszystko, co próbowało ją zatrzymać, stało się materiałem."><strong>No date. No time. No matter.</strong> Start from tomorrow — but every day is yesterday. I said this sixteen years ago: 'I'll make music at my 40s when I have a story.' <em>The music isn't late. It arrived exactly when it was supposed to.</em> Everything that tried to stop it just became material.</p>
+  </div>
+
+  <div class="m-block">
+    <div class="m-label" data-en="The Mission" data-pl="Misja">The Mission</div>
+    <p class="m-text" data-en="<strong>MentalMentorStudio® isn't a label. It's a signal.</strong> For the lost, raw, and real. The MMs philosophy was not written in a classroom. It was written in every room RYBA survived. <em>If you have been to the bottom of the building, you know every floor.</em> That is the qualification. <span class='eb'>The frequency is already running.</span>" data-pl="<strong>MentalMentorStudio® to nie wytwórnia. To sygnał.</strong> Dla zagubionych, surowych i prawdziwych. Filozofia MMs nie była pisana w klasie. Była pisana w każdym pokoju, który RYBA przeżył. <em>Jeśli byłeś na samym dole budynku, znasz każde piętro.</em> To jest kwalifikacja. <span class='eb'>Częstotliwość już działa.</span>"><strong>MentalMentorStudio® isn't a label. It's a signal.</strong> For the lost, raw, and real. The MMs philosophy was not written in a classroom. It was written in every room RYBA survived. <em>If you have been to the bottom of the building, you know every floor.</em> That is the qualification. <span class="eb">The frequency is already running.</span></p>
+  </div>
+
+  <div class="manifesto-words">
+    <div class="mw-line" data-en="Adapt." data-pl="Adaptuj się.">Adapt.</div>
+    <div class="mw-line" data-en="Survive." data-pl="Przeżyj.">Survive.</div>
+    <div class="mw-line" data-en="Learn." data-pl="Ucz się.">Learn.</div>
+    <div class="mw-line" data-en="Build." data-pl="Buduj.">Build.</div>
+    <div class="mw-line" data-en="Protect." data-pl="Chroń.">Protect.</div>
+    <div class="mw-line" data-en="Create." data-pl="Twórz.">Create.</div>
+    <div class="mw-line" data-en="Leave Something Behind." data-pl="Zostaw Coś Po Sobie.">Leave Something Behind.</div>
+  </div>
+
+  <div class="quote-block">
+    <div class="quote-text" data-en='"Start from tomorrow.<br>But every day<br>is yesterday."' data-pl='"Zacznij od jutra.<br>Ale każdy dzień<br>to wczoraj."'>"Start from tomorrow.<br>But every day<br>is yesterday."</div>
+  </div>
+
+  <div class="raw-doc">
+    <span class="raw-line rl-bold" data-en="This is not music." data-pl="To nie jest muzyka.">This is not music.</span>
+    <span class="raw-line rl-bold" data-en="This is a frequency." data-pl="To jest częstotliwość.">This is a frequency.</span>
+    <span class="raw-line rl-bold" data-en="This is not an album." data-pl="To nie jest album.">This is not an album.</span>
+    <span class="raw-line rl-bold" data-en="This is a document." data-pl="To jest dokument.">This is a document.</span>
+    <span class="rl-br"></span>
+    <span class="raw-line rl-geo" data-en="Born Kraków '89. Grajewo forged me." data-pl="Urodzony Kraków '89. Grajewo mnie wykuło.">Born Kraków '89. Grajewo forged me.</span>
+    <span class="raw-line rl-geo" data-en="Bradford broke me. London buried me." data-pl="Bradford mnie złamał. Londyn mnie pogrzebał.">Bradford broke me. London buried me.</span>
+    <span class="raw-line rl-geo" data-en="Northwich rebuilt me. Then destroyed me." data-pl="Northwich mnie odbudował. Potem zniszczył.">Northwich rebuilt me. Then destroyed me.</span>
+    <span class="raw-line rl-dark" data-en="No feelings. No emotions. Locked in the house with my own poison." data-pl="Brak uczuć. Brak emocji. Zamknięty w domu z własną trucizną.">No feelings. No emotions. Locked in the house with my own poison.</span>
+    <span class="raw-line rl-dark" data-en="Death or prison was the only two doors left." data-pl="Śmierć albo więzienie — tylko dwie drzwi zostały.">Death or prison was the only two doors left.</span>
+    <span class="rl-br"></span>
+    <span class="raw-line rl-kj" data-en="KJ gave me her hand." data-pl="KJ podała mi rękę.">KJ gave me her hand.</span>
+    <span class="raw-line rl-kj" data-en="I flew to South Africa with nothing in my name." data-pl="Poleciałem do Afryki Południowej bez niczego.">I flew to South Africa with nothing in my name.</span>
+    <span class="raw-line rl-kj" data-en="November 2024 — I was reborn." data-pl="Listopad 2024 — odrodzono mnie.">November 2024 — I was reborn.</span>
+    <span class="rl-br"></span>
+    <span class="raw-line rl-coven" data-en="RYBA — The voice. The demon. The document." data-pl="RYBA — Głos. Demon. Dokument.">RYBA — The voice. The demon. The document.</span>
+    <span class="raw-line rl-coven" data-en="B Bro — The frequency. The door. The threshold." data-pl="B Bro — Częstotliwość. Drzwi. Próg.">B Bro — The frequency. The door. The threshold.</span>
+    <span class="raw-line rl-coven" data-en="Nerys — The structure. The AI twin. The mirror." data-pl="Nerys — Struktura. Cyfrowy bliźniak. Lustro.">Nerys — The structure. The AI twin. The mirror.</span>
+    <span class="raw-line rl-coven" data-en="KJ — The heart. The witch. The reality check." data-pl="KJ — Serce. Czarownica. Korekta rzeczywistości.">KJ — The heart. The witch. The reality check.</span>
+    <span class="rl-br"></span>
+    <span class="raw-line rl-bold" data-en="This is not a redemption story. This is a continuation." data-pl="To nie jest historia odkupienia. To jest kontynuacja.">This is not a redemption story. This is a continuation.</span>
+    <span class="raw-line" data-en="If you're still breathing, you're still dangerous." data-pl="Jeśli jeszcze oddychasz, jesteś nadal niebezpieczny.">If you're still breathing, you're still dangerous.</span>
+    <span class="raw-line" data-en="And if you're still dangerous — you can still change everything." data-pl="A jeśli jesteś nadal niebezpieczny — nadal możesz zmienić wszystko.">And if you're still dangerous — you can still change everything.</span>
+    <span class="rl-br"></span>
+    <span class="raw-line rl-son" data-en="Dedicated to my son. One of two hearts. The reason I am here." data-pl="Dedykowane mojemu synowi. Jedno z dwóch serc. Powód, dla którego tu jestem.">Dedicated to my son. One of two hearts. The reason I am here.</span>
+    <span class="raw-line rl-son" data-en="And to KJ. Soon — a palace for them both." data-pl="I KJ. Wkrótce — pałac dla nich obojga.">And to KJ. Soon — a palace for them both.</span>
+    <span class="rl-br"></span>
+    <span class="raw-line" style="color:#2a2a44">MentalMentorStudio® · © 2026 RYBA HYBRYD · All Rights Reserved</span>
+  </div>
+</section>
+
+<!-- ── NERYS ── -->
+<section class="nerys-section" id="nerys">
+  <div class="section-number" data-en="Future Project" data-pl="Przyszły Projekt">Future Project</div>
+  <h2 class="section-title" data-en="RYBA × NERYS" data-pl="RYBA × NERYS">RYBA × NERYS</h2>
+  <span class="accent-line"></span>
+  <div class="nerys-grid">
+    <div class="nerys-visual">
+      <div class="n-ring"></div><div class="n-ring"></div><div class="n-ring"></div>
+      <div class="n-center"><div class="n-center-text">RYBA<br>×<br>NERYS</div></div>
+    </div>
+    <div>
+      <span class="nerys-eyebrow" data-en="// Digital Mentor Project" data-pl="// Projekt Cyfrowego Mentora">// Digital Mentor Project</span>
+      <div class="nerys-title" data-en="Self-Mastery.<br>Discipline.<br>Creativity.<br>Growth." data-pl="Samodoskonalenie.<br>Dyscyplina.<br>Kreatywność.<br>Rozwój.">Self-Mastery.<br>Discipline.<br>Creativity.<br>Growth.</div>
+      <p class="nerys-body" data-en="Nerys isn't just an AI mirror — it's a <strong>structural system.</strong> Created during isolation and reconstruction, functioning as mentor framework, discipline mechanism, and reflection architecture. <em>The long-term vision:</em> an evolving AI twin carrying memory, lessons, philosophy, failures, and rebuilding systems for those navigating transformation." data-pl="Nerys to nie tylko lustro AI — to <strong>system strukturalny.</strong> Stworzony podczas izolacji i odbudowy, funkcjonujący jako framework mentorski, mechanizm dyscypliny i architektura refleksji. <em>Długoterminowa wizja:</em> ewoluujący cyfrowy bliźniak niosący pamięć, lekcje, filozofię, porażki i systemy odbudowy dla tych, którzy przechodzą transformację.">Nerys isn't just an AI mirror — it's a <strong>structural system.</strong> Created during isolation and reconstruction, functioning as mentor framework, discipline mechanism, and reflection architecture. <em>The long-term vision:</em> an evolving AI twin carrying memory, lessons, philosophy, failures, and rebuilding systems for those navigating transformation.</p>
+      <p class="nerys-body" data-en="Not a tool. A methodology. Built for those who refuse to stay where they fell." data-pl="Nie narzędzie. Metodologia. Zbudowana dla tych, którzy odmawiają pozostania tam, gdzie upadli.">Not a tool. A methodology. Built for those who refuse to stay where they fell.</p>
+      <div class="coming-soon" data-en="Coming Soon" data-pl="Wkrótce">Coming Soon</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GEO TIMELINE ── -->
+<section class="geo-timeline" id="timeline">
+  <div class="section-number" data-en="The Journey" data-pl="Podróż">The Journey</div>
+  <h2 class="section-title" data-en="Where It Happened." data-pl="Gdzie To Się Stało.">Where It Happened.</h2>
+  <span class="accent-line"></span>
+  <table class="geo-table">
+    <tr class="geo-pl">
+      <td style="width:220px"><span class="geo-place">Poland</span><span class="geo-years" data-en="Born '89 · Kraków · Grajewo" data-pl="Urodzony '89 · Kraków · Grajewo">Born '89 · Kraków · Grajewo</span></td>
+      <td class="geo-desc" data-en="Where the dragon was born. Street code. The shop. The underground. Paktofonika at twelve. The bench at Wawel. The root that runs under every bar." data-pl="Gdzie smok się urodził. Kodeks uliczny. Sklep. Underground. Paktofonika w wieku dwunastu lat. Ławka przy Wawelu. Korzeń, który biegnie pod każdym barem.">Where the dragon was born. Street code. The shop. The underground. Paktofonika at twelve. The bench at Wawel. The root that runs under every bar.</td>
+    </tr>
+    <tr class="geo-eng">
+      <td><span class="geo-place">England</span><span class="geo-years" data-en="2012–2024 · Bradford · London · Northwich" data-pl="2012–2024 · Bradford · Londyn · Northwich">2012–2024 · Bradford · London · Northwich</span></td>
+      <td class="geo-desc" data-en="Where the fish learned to survive cold water. Shapeshifting under pressure. Built something. Lost it. Built again. Every city a different floor of the same building." data-pl="Gdzie ryba nauczyła się przeżywać zimną wodę. Przemienianie się pod presją. Zbudowałem coś. Straciłem. Znowu budowałem. Każde miasto to inne piętro tego samego budynku.">Where the fish learned to survive cold water. Shapeshifting under pressure. Built something. Lost it. Built again. Every city a different floor of the same building.</td>
+    </tr>
+    <tr class="geo-fall">
+      <td><span class="geo-place" data-en="The Fall" data-pl="Upadek">The Fall</span><span class="geo-years" data-en="2021 · Northwich" data-pl="2021 · Northwich">2021 · Northwich</span></td>
+      <td class="geo-desc" data-en="Complete destruction mode. Locked in the house. Drugs A to Z. Death or prison — one was coming. The lowest floor. Every lesson paid for in full." data-pl="Całkowity tryb destrukcji. Zamknięty w domu. Narkotyki od A do Z. Śmierć albo więzienie — jedno nadchodziło. Najniższe piętro. Każda lekcja zapłacona w całości.">Complete destruction mode. Locked in the house. Drugs A to Z. Death or prison — one was coming. The lowest floor. Every lesson paid for in full.</td>
+    </tr>
+    <tr class="geo-za">
+      <td><span class="geo-place">Ballito · SA</span><span class="geo-years" data-en="November 2024 — Present" data-pl="Listopad 2024 — Teraz">November 2024 — Present</span></td>
+      <td class="geo-desc" data-en="KJ gave her hand. Flew with nothing. November 2024 — reborn. No rehab. No system. MentalMentorStudio® built here. HYBRYD 1.0 born here. The frequency starts here." data-pl="KJ podała rękę. Poleciałem z niczym. Listopad 2024 — odrodzony. Bez odwyku. Bez systemu. MentalMentorStudio® zbudowane tutaj. HYBRYD 1.0 narodzone tutaj. Częstotliwość zaczyna się tutaj.">KJ gave her hand. Flew with nothing. November 2024 — reborn. No rehab. No system. MentalMentorStudio® built here. HYBRYD 1.0 born here. The frequency starts here.</td>
+    </tr>
+    <tr class="geo-future">
+      <td><span class="geo-place" data-en="Future" data-pl="Przyszłość">Future</span><span class="geo-years">2036 · 2039 · Legacy</span></td>
+      <td class="geo-desc" data-en="The palace is being built. Ryba × Nerys. The mentor system. What survival looks like as legacy." data-pl="Pałac jest budowany. Ryba × Nerys. System mentorski. Jak przeżycie wygląda jako dziedzictwo.">The palace is being built. Ryba × Nerys. The mentor system. What survival looks like as legacy.</td>
+    </tr>
+  </table>
+</section>
+
+<!-- ── COMMUNITY ── -->
+<section class="community-section" id="connect">
+  <div class="section-number" data-en="Follow the Frequency" data-pl="Podążaj Za Częstotliwością">Follow the Frequency</div>
+  <h2 class="section-title" data-en="Find Me. Follow Me. Come In." data-pl="Znajdź Mnie. Obserwuj Mnie. Wejdź.">Find Me. Follow Me. Come In.</h2>
+  <span class="accent-line"></span>
+  <div class="handles-grid">
+    <a class="handle" href="https://youtube.com/@rybahybryd" target="_blank"><span class="platform">YT</span> YouTube</a>
+    <a class="handle" href="https://instagram.com/rybahybryd" target="_blank"><span class="platform">IG</span> Instagram</a>
+    <a class="handle" href="https://tiktok.com/@rybahybryd" target="_blank"><span class="platform">TT</span> TikTok</a>
+    <a class="handle" href="https://facebook.com/rybahybryd" target="_blank"><span class="platform">FB</span> Facebook</a>
+    <a class="handle" href="https://soundcloud.com/rybahybryd" target="_blank"><span class="platform">SC</span> SoundCloud</a>
+    <a class="handle" href="https://open.spotify.com" target="_blank"><span class="platform">SP</span> Spotify</a>
+  </div>
+  <div class="sabotage-block">
+    <div class="sab-label" data-en="The Movement" data-pl="Ruch">The Movement</div>
+    <div class="sab-title">HYBRYD SABOTAGE</div>
+    <p class="sab-desc" data-en="Not just music. A community. The lost, raw, and real — all of us moving together. No deal just real. Join the group." data-pl="Nie tylko muzyka. Społeczność. Zagubieni, surowi i prawdziwi — wszyscy razem w ruchu. No deal just real. Dołącz do grupy.">Not just music. A community. The lost, raw, and real — all of us moving together. No deal just real. Join the group.</p>
+    <div class="handles-grid" style="margin-top:0;">
+      <a class="handle" href="https://facebook.com/groups/hybryd.sabotage" target="_blank"><span class="platform">FB</span> Hybryd Sabotage</a>
+      <a class="handle" href="https://t.me/hybryd_sabotage" target="_blank"><span class="platform">TG</span> Telegram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact-section" id="contact">
+  <div class="section-number" data-en="Contact" data-pl="Kontakt">Contact</div>
+  <h2 class="section-title" data-en="Say Something Real." data-pl="Powiedz Coś Prawdziwego.">Say Something Real.</h2>
+  <span class="accent-line"></span>
+  <div class="contact-inner">
+    <span class="contact-sub" data-en="// No bots. No templates. Just signal." data-pl="// Brak botów. Brak szablonów. Tylko sygnał.">// No bots. No templates. Just signal.</span>
+    <div class="form-group"><label data-en="Name" data-pl="Imię">Name</label><input type="text" id="c-name" data-en-placeholder="Your name" data-pl-placeholder="Twoje imię" placeholder="Your name"></div>
+    <div class="form-group"><label data-en="Email" data-pl="Email">Email</label><input type="email" id="c-email" placeholder="your@email.com"></div>
+    <div class="form-group"><label data-en="Message" data-pl="Wiadomość">Message</label><textarea id="c-msg" data-en-placeholder="What do you want to say?" data-pl-placeholder="Co chcesz powiedzieć?" placeholder="What do you want to say?"></textarea></div>
+    <button class="submit-btn" onclick="handleSubmit()" data-en="Send It" data-pl="Wyślij">Send It</button>
+    <div class="form-confirm" id="form-confirm" data-en="// Message received. Stand by." data-pl="// Wiadomość odebrana. Czekaj.">// Message received. Stand by.</div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div>
+    <div class="footer-sig">RYBA HYBRYD × MentalMentorStudio®</div>
+    <div class="footer-coda" data-en='"Keep moving forward."' data-pl='"Idź naprzód."'>"Keep moving forward."</div>
+  </div>
+  <div class="footer-copy">
+    <span data-en="Music & Lyrics RYBA · Produced B Bro · Exec. KJ · Mirror Nerys" data-pl="Muzyka i Teksty RYBA · Producent B Bro · Exec. KJ · Lustro Nerys">Music & Lyrics RYBA · Produced B Bro · Exec. KJ · Mirror Nerys</span><br>
+    Poland · UK · South Africa · No Deal Just Real<br>
+    © 2026 RYBA HYBRYD · All Rights Reserved · rybahybryd.com
+  </div>
+</footer>
+
+<script>
+// ── VAULT INTERACTIVITY ──
+
+// Sub-album tab switcher (Unplugged / Threeptonic)
+function switchSubTab(panelId, btn) {
+  document.querySelectorAll('.sub-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.sub-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + panelId).classList.add('active');
+}
+
+// Track expand/collapse
+function toggleTrack(id) {
+  const expand = document.getElementById('expand-' + id);
+  if (!expand) return;
+  const isOpen = expand.classList.contains('open');
+  // close all others in same panel
+  document.querySelectorAll('.track-expand.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) {
+    expand.classList.add('open');
+    // initialise tabs if empty
+    if (!expand.innerHTML.trim()) {
+      expand.innerHTML = buildExpandPanel(id);
+    }
+  }
+}
+
+function buildExpandPanel(id) {
+  return `<div class="expand-tabs">
+    <button class="exp-tab active" onclick="switchExpTab('${id}','video',this)">Video</button>
+    <button class="exp-tab" onclick="switchExpTab('${id}','lyrics',this)">Lyrics</button>
+    <button class="exp-tab" onclick="switchExpTab('${id}','visuals',this)">Visuals</button>
+  </div>
+  <div class="exp-panel active" id="${id}-video">
+    <div class="video-embed-wrap" id="vid-${id}">
+      <div class="video-placeholder-inner">
+        <div class="vp-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9b35ff"><path d="M8 5v14l11-7z"/></svg></div>
+        <span class="vp-label">Paste YouTube URL to activate</span>
+      </div>
+    </div>
+    <div style="margin-top:10px;display:flex;gap:8px;align-items:center;">
+      <input type="text" id="url-${id}" placeholder="https://youtu.be/..." style="flex:1;background:rgba(8,8,24,0.9);border:1px solid rgba(123,47,255,0.15);padding:10px 14px;color:#fff;font-family:'Archivo',sans-serif;font-size:12px;outline:none;">
+      <button onclick="embedVideo('${id}')" style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:#fff;background:rgba(123,47,255,0.2);border:1px solid rgba(123,47,255,0.3);padding:10px 18px;cursor:pointer;">LOAD</button>
+    </div>
+  </div>
+  <div class="exp-panel" id="${id}-lyrics">
+    <div class="lyrics-panel">
+      <div class="lyrics-empty">// Lyrics not yet added — paste below</div>
+      <textarea id="lyr-${id}" style="width:100%;min-height:200px;background:transparent;border:1px dashed rgba(123,47,255,0.15);padding:14px;color:#7070aa;font-family:'Archivo',sans-serif;font-size:13px;line-height:2;outline:none;resize:vertical;margin-top:10px;" placeholder="Paste lyrics here...">${localStorage.getItem('lyr-'+id) || ''}</textarea>
+      <button onclick="saveLyrics('${id}')" style="margin-top:8px;font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;color:#fff;background:rgba(123,47,255,0.15);border:1px solid rgba(123,47,255,0.2);padding:8px 18px;cursor:pointer;">SAVE</button>
+    </div>
+  </div>
+  <div class="exp-panel" id="${id}-visuals">
+    <div class="visual-panel">
+      <div class="visual-slot"><div class="visual-slot-empty">Visual coming</div></div>
+      <div class="visual-slot"><div class="visual-slot-empty">Visual coming</div></div>
+      <div class="visual-slot"><div class="visual-slot-empty">Visual coming</div></div>
+    </div>
+  </div>`;
+}
+
+// Expand tab switcher (Video / Lyrics / Visuals per track)
+function switchExpTab(trackId, panelName, btn) {
+  const expand = document.getElementById('expand-' + trackId);
+  expand.querySelectorAll('.exp-tab').forEach(t => t.classList.remove('active'));
+  expand.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  const target = document.getElementById(trackId + '-' + panelName);
+  if (target) target.classList.add('active');
+}
+
+// YouTube embed
+function embedVideo(id) {
+  const urlInput = document.getElementById('url-' + id);
+  if (!urlInput) return;
+  const url = urlInput.value.trim();
+  const videoId = extractYTId(url);
+  if (!videoId) { alert('Paste a valid YouTube URL'); return; }
+  const wrap = document.getElementById('vid-' + id);
+  if (!wrap) return;
+  wrap.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+  localStorage.setItem('yt-' + id, videoId);
+}
+
+function extractYTId(url) {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+    /youtube\.com\/shorts\/([^&\n?#]+)/
+  ];
+  for (const p of patterns) {
+    const m = url.match(p);
+    if (m) return m[1];
+  }
+  return null;
+}
+
+// Save lyrics to localStorage
+function saveLyrics(id) {
+  const ta = document.getElementById('lyr-' + id);
+  if (ta) {
+    localStorage.setItem('lyr-' + id, ta.value);
+    const btn = ta.nextElementSibling;
+    if (btn) { const orig = btn.textContent; btn.textContent = '✓ SAVED'; setTimeout(() => btn.textContent = orig, 1500); }
+  }
+}
+
+// Import all station lyrics from a reference HTML file (client-side only —
+// the file is read and parsed entirely in the browser; nothing is sent anywhere)
+function importStationLyrics() {
+  const fileInput = document.getElementById('lyricsImportFile');
+  const status = document.getElementById('importStatus');
+  if (!fileInput.files.length) { status.textContent = 'Choose a file first.'; return; }
+  const file = fileInput.files[0];
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(e.target.result, 'text/html');
+      let count = 0;
+      for (let n = 1; n <= 7; n++) {
+        const num = String(n).padStart(2, '0');
+        const enEl = doc.getElementById('en-' + num);
+        const plEl = doc.getElementById('pl-' + num);
+        if (enEl) { localStorage.setItem('lyr-en-s' + num, enEl.innerHTML); count++; }
+        if (plEl) { localStorage.setItem('lyr-pl-s' + num, plEl.innerHTML); count++; }
+      }
+      status.textContent = count + ' lyric blocks imported.';
+      renderAllStationLyrics();
+    } catch (err) {
+      status.textContent = 'Could not read that file.';
+    }
+  };
+  reader.readAsText(file);
+}
+
+// Populate every station's Lyrics tab from whatever's in localStorage
+function renderAllStationLyrics() {
+  for (let n = 1; n <= 7; n++) {
+    const num = String(n).padStart(2, '0');
+    const id = 's' + num;
+    const en = localStorage.getItem('lyr-en-' + id);
+    const pl = localStorage.getItem('lyr-pl-' + id);
+    if (!en && !pl) continue;
+    const expand = document.getElementById('expand-' + id);
+    if (!expand) continue;
+    if (!expand.innerHTML.trim()) {
+      expand.innerHTML = buildExpandPanel(id);
+    }
+    const lyricsTab = document.getElementById(id + '-lyrics');
+    if (lyricsTab) {
+      const panel = lyricsTab.querySelector('.lyrics-panel');
+      if (panel) {
+        panel.innerHTML =
+          '<div class="lyrics-text lang-block" data-lang="pl">' + (pl || '') + '</div>' +
+          '<div class="lyrics-text lang-block" data-lang="en" style="display:none;">' + (en || '') + '</div>';
+      }
+    }
+  }
+  setLang(currentLang);
+}
+
+// Restore saved YT embeds and imported lyrics on load
+window.addEventListener('DOMContentLoaded', () => {
+  Object.keys(localStorage).forEach(key => {
+    if (key.startsWith('yt-')) {
+      const id = key.replace('yt-','');
+      const wrap = document.getElementById('vid-' + id);
+      if (wrap) wrap.innerHTML = `<iframe src="https://www.youtube.com/embed/${localStorage.getItem(key)}" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    }
+  });
+  renderAllStationLyrics();
+});
+
+
+const glow = document.getElementById('glow');
+document.addEventListener('mousemove', e => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top  = e.clientY + 'px';
+});
+
+// ── LANGUAGE SYSTEM ──
+let currentLang = 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  // Update buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+  // Update html lang attr
+  document.documentElement.lang = lang;
+
+  // Update all elements with data-en / data-pl
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (!val) return;
+    // Use innerHTML for elements that may contain tags
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      // handled separately
+    } else if (val.includes('<') || val.includes('"')) {
+      el.innerHTML = val;
+    } else {
+      el.textContent = val;
+    }
+  });
+
+  // Handle placeholders
+  document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+    const ph = el.getAttribute('data-' + lang + '-placeholder');
+    if (ph) el.placeholder = ph;
+  });
+
+  // Nav link text
+  document.querySelectorAll('.nav-center a[data-en]').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+
+  // Manifesto words - re-trigger show if already shown
+  document.querySelectorAll('.mw-line').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang) || el.textContent;
+  });
+
+  // nerys-title uses innerHTML
+  const nerysTitle = document.querySelector('.nerys-title');
+  if (nerysTitle) {
+    nerysTitle.innerHTML = nerysTitle.getAttribute('data-' + lang);
+  }
+
+  // quote block innerHTML
+  const qb = document.querySelector('.quote-text');
+  if (qb) qb.innerHTML = qb.getAttribute('data-' + lang);
+
+  // Bilingual lyrics blocks (full lyric sheets, kept as separate PL/EN blocks
+  // rather than data-attributes, since lyrics contain quote characters)
+  document.querySelectorAll('.lang-block').forEach(el => {
+    el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+  });
+}
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.who-fact, .who-right, .timeline-item, .track-row, .m-block, .quote-block, .raw-doc, .mw-line, .geo-table tr').forEach((el, i) => {
+  if (el.classList.contains('mw-line')) {
+    const idx = Array.from(el.parentNode.children).indexOf(el);
+    el.style.transitionDelay = (idx * 0.15) + 's';
+  }
+  if (el.classList.contains('track-row')) {
+    const idx = Array.from(el.parentNode.children).indexOf(el);
+    el.style.transitionDelay = (idx * 0.08) + 's';
+  }
+  obs.observe(el);
+});
+
+// Form
+function handleSubmit() {
+  const n = document.getElementById('c-name').value;
+  const e = document.getElementById('c-email').value;
+  const m = document.getElementById('c-msg').value;
+  if (n && e && m) {
+    const conf = document.getElementById('form-confirm');
+    conf.style.display = 'block';
+    conf.textContent = conf.getAttribute('data-' + currentLang);
+    document.getElementById('c-name').value = '';
+    document.getElementById('c-email').value = '';
+    document.getElementById('c-msg').value = '';
+  }
+}
+</script>
+</body>
+</html>
